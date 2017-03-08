@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#f2f2f2</color>
+    <color name="colorPrimaryDark">#4b4b4b</color>
+    <color name="colorAccent">#02c8ff</color>
+
+    <array name="which_palette">
+        <item>@color/flat_naranja</item>
+        <item>@color/flat_magenta</item>
+        <item>@color/flat_lila</item>
+        <item>@color/flat_azul</item>
+        <item>@color/flat_verde</item>
+
+    </array>
+    <color name="flat_naranja">#eac14d</color>
+    <color name="flat_magenta">#ff0040</color>
+    <color name="flat_lila">#cb70d7</color>
+    <color name="flat_azul">#7658f8</color>
+    <color name="flat_verde">#5bd999</color>
+    <color name="extra">#56cc90</color>
+</resources>

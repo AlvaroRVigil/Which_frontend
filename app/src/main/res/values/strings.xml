@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Which</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_checkout">Checkout</string>
+
+
+    <string name="top1_valor">4,5</string>
+    <string name="top2_valor">4,3</string>
+    <string name="top3_valor">4,0</string>
+    <string name="top4_valor">3,5</string>
+    <string name="top5_valor">3,3</string>
+    <string name="top6_valor">3,0</string>
+    <string name="top7_valor">2,5</string>
+    <string name="top8_valor">2,3</string>
+    <string name="top9_valor">2,0</string>
+    <string name="top10_valor">1,5</string>
+    <string name="title_activity_marcas">Marcas</string>
+    <string name="title_activity_sistemas">Sistemas</string>
+    <string name="title_activity_lista_marca">Lista_marca</string>
+
+</resources>

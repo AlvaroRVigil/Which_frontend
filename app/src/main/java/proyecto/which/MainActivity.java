@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity
         });
 
 
-        Iphone =(ImageButton)findViewById(R.id.top3_button);
+        Iphone =(ImageButton)findViewById(R.id.top1_button);
 
         Iphone.setOnClickListener(new View.OnClickListener() {
             @Override

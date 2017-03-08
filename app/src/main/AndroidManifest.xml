@@ -30,6 +30,10 @@
         <activity
             android:name=".ListaMarca"
             android:label="@string/title_activity_lista_marca"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".PerfilLista"
+            android:label="@string/title_activity_perfil_lista"
             android:theme="@style/AppTheme"></activity>
     </application>
 

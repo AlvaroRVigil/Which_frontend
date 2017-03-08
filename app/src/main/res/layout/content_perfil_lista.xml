@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_shooting_range"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:background="@color/extra"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="proyecto.which.Shooting_Range">
+
+
+    <!-- <HorizontalScrollView
+         android:layout_width="match_parent"
+         android:layout_height="195dp">
+
+         <LinearLayout
+             android:layout_width="wrap_content"
+             android:layout_height="match_parent"
+             android:orientation="horizontal" >
+
+             <FrameLayout android:layout_height="165dp"
+                 android:layout_width="165dp"
+                 android:layout_marginRight="10dp">
+
+                 <ProgressBar
+                     style="?android:attr/progressBarStyleHorizontal"
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+                     android:id="@+id/progressBar10"
+                     android:max="100"
+                     android:progress="75"
+                     android:progressTint="?attr/colorAccent"
+                     android:fadeScrollbars="true"
+                     android:layout_alignParentStart="true"
+                     android:layout_centerVertical="false"
+                     android:progressBackgroundTint="@color/colorPrimary"
+                     android:rotation="270"
+                     android:saveEnabled="true"
+                     android:scaleX="1"
+                     android:scaleY="40"
+                     android:secondaryProgressTint="@android:color/transparent" />
+
+                 <ImageButton
+                     android:id="@+id/imageButton"
+                     android:elevation="1dp"
+                     android:background="@mipmap/movil1"
+                     android:layout_alignParentTop="true"
+                     android:layout_alignEnd="@+id/progressBar10"
+                     android:layout_alignParentStart="true"
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent" />
+             </FrameLayout>
+
+             <FrameLayout android:layout_height="165dp"
+                 android:layout_width="165dp"
+                 android:layout_marginRight="10dp">
+
+                 <ProgressBar
+                     style="?android:attr/progressBarStyleHorizontal"
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+                     android:id="@+id/progressBar101"
+                     android:max="100"
+                     android:progress="45"
+                     android:progressTint="?attr/colorAccent"
+                     android:fadeScrollbars="true"
+                     android:layout_alignParentStart="true"
+                     android:layout_centerVertical="false"
+                     android:progressBackgroundTint="@color/colorPrimary"
+                     android:rotation="270"
+                     android:saveEnabled="true"
+                     android:scaleX="1"
+                     android:scaleY="40"
+                     android:secondaryProgressTint="@android:color/transparent" />
+
+                 <ImageButton
+                     android:id="@+id/imageButton1"
+                     android:elevation="1dp"
+                     android:background="@mipmap/movil1"
+                     android:layout_alignParentTop="true"
+                     android:layout_alignEnd="@+id/progressBar10"
+                     android:layout_alignParentStart="true"
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent" />
+             </FrameLayout>
+
+             <FrameLayout android:layout_height="165dp"
+                 android:layout_width="165dp"
+                 android:layout_marginRight="10dp">
+
+                 <ProgressBar
+                     style="?android:attr/progressBarStyleHorizontal"
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+                     android:id="@+id/progressBar102"
+                     android:max="100"
+                     android:progress="85"
+                     android:progressTint="?attr/colorAccent"
+                     android:fadeScrollbars="true"
+                     android:layout_alignParentStart="true"
+                     android:layout_centerVertical="false"
+                     android:progressBackgroundTint="@color/colorPrimary"
+                     android:rotation="270"
+                     android:saveEnabled="true"
+                     android:scaleX="1"
+                     android:scaleY="40"
+                     android:secondaryProgressTint="@android:color/transparent" />
+
+                 <ImageButton
+                     android:id="@+id/imageButton2"
+                     android:elevation="1dp"
+                     android:background="@mipmap/movil1"
+                     android:layout_alignParentTop="true"
+                     android:layout_alignEnd="@+id/progressBar10"
+                     android:layout_alignParentStart="true"
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent" />
+             </FrameLayout>
+
+             <FrameLayout android:layout_height="165dp"
+                 android:layout_width="165dp"
+                 android:layout_marginRight="10dp">
+
+                 <ProgressBar
+                     style="?android:attr/progressBarStyleHorizontal"
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+                     android:id="@+id/progressBar103"
+                     android:max="100"
+                     android:progress="60"
+                     android:progressTint="?attr/colorAccent"
+                     android:fadeScrollbars="true"
+                     android:layout_alignParentStart="true"
+                     android:layout_centerVertical="false"
+                     android:progressBackgroundTint="@color/colorPrimary"
+                     android:rotation="270"
+                     android:saveEnabled="true"
+                     android:scaleX="1"
+                     android:scaleY="40"
+                     android:secondaryProgressTint="@android:color/transparent" />
+
+                 <ImageButton
+                     android:id="@+id/imageButton3"
+                     android:elevation="1dp"
+                     android:background="@mipmap/movil1"
+                     android:layout_alignParentTop="true"
+                     android:layout_alignEnd="@+id/progressBar10"
+                     android:layout_alignParentStart="true"
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent" />
+             </FrameLayout>
+
+             <FrameLayout android:layout_height="165dp"
+                 android:layout_width="165dp"
+                 android:layout_marginRight="10dp">
+
+                 <ProgressBar
+                     style="?android:attr/progressBarStyleHorizontal"
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+                     android:id="@+id/progressBar104"
+                     android:max="100"
+                     android:progress="89"
+                     android:progressTint="?attr/colorAccent"
+                     android:fadeScrollbars="true"
+                     android:layout_alignParentStart="true"
+                     android:layout_centerVertical="false"
+                     android:progressBackgroundTint="@color/colorPrimary"
+                     android:rotation="270"
+                     android:saveEnabled="true"
+                     android:scaleX="1"
+                     android:scaleY="40"
+                     android:secondaryProgressTint="@android:color/transparent" />
+
+                 <ImageButton
+                     android:id="@+id/imageButton4"
+                     android:elevation="1dp"
+                     android:background="@mipmap/movil1"
+                     android:layout_alignParentTop="true"
+                     android:layout_alignEnd="@+id/progressBar10"
+                     android:layout_alignParentStart="true"
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent" />
+             </FrameLayout>
+
+             <FrameLayout android:layout_height="165dp"
+                 android:layout_width="165dp">
+
+                 <ProgressBar
+                     style="?android:attr/progressBarStyleHorizontal"
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+                     android:id="@+id/progressBar105"
+                     android:max="100"
+                     android:progress="57"
+                     android:progressTint="?attr/colorAccent"
+                     android:fadeScrollbars="true"
+                     android:layout_alignParentStart="true"
+                     android:layout_centerVertical="false"
+                     android:progressBackgroundTint="@color/colorPrimary"
+                     android:rotation="270"
+                     android:saveEnabled="true"
+                     android:scaleX="1"
+                     android:scaleY="40"
+                     android:secondaryProgressTint="@android:color/transparent" />
+
+                 <ImageButton
+                     android:id="@+id/imageButton5"
+                     android:elevation="1dp"
+                     android:background="@mipmap/movil1"
+                     android:layout_alignParentTop="true"
+                     android:layout_alignEnd="@+id/progressBar10"
+                     android:layout_alignParentStart="true"
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent" />
+             </FrameLayout>
+         </LinearLayout>
+     </HorizontalScrollView> -->
+
+    <RelativeLayout
+        android:layout_width="100dp"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@mipmap/ic_launcher" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </RelativeLayout>
+
+</RelativeLayout>

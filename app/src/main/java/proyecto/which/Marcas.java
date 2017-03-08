@@ -49,17 +49,92 @@ public class Marcas extends AppCompatActivity
 
 
 
+        apple =(ImageButton)findViewById(R.id.Apple);
+
+        apple.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View V) {
+
+                Intent apple = new Intent(Marcas.this, ListaMarca.class);
+                apple.putExtra("marca", "apple");
+                startActivity(apple);
+
+            }
+
+
+        });
 
 
 
 
+        nokia =(ImageButton)findViewById(R.id.Nokia);
+
+        nokia.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View V) {
+
+                Intent nokia = new Intent(Marcas.this, ListaMarca.class);
+                nokia.putExtra("marca", "nokia");
+                startActivity(nokia);
+
+            }
+
+
+        });
 
 
 
 
+        bq =(ImageButton)findViewById(R.id.BQ);
+
+        bq.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View V) {
+
+                Intent bq = new Intent(Marcas.this, ListaMarca.class);
+                bq.putExtra("marca", "bq");
+                startActivity(bq);
+
+            }
+
+
+        });
 
 
 
+
+        huawai =(ImageButton)findViewById(R.id.Huawai);
+
+        huawai.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View V) {
+
+                Intent huawai = new Intent(Marcas.this, ListaMarca.class);
+                huawai.putExtra("marca", "huawai");
+                startActivity(huawai);
+
+            }
+
+
+        });
+
+
+
+
+        blackberry =(ImageButton)findViewById(R.id.Blackberry);
+
+        blackberry.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View V) {
+
+                Intent blackberry = new Intent(Marcas.this, ListaMarca.class);
+                blackberry.putExtra("marca", "blackberry");
+                startActivity(blackberry);
+
+            }
+
+
+        });
 
 
 

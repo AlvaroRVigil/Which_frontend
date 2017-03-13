@@ -91,7 +91,7 @@ public class Marcas extends AppCompatActivity
             @Override
             public void onClick(View V) {
 
-                Intent bq = new Intent(Marcas.this, ListaMarca.class);
+                Intent bq = new Intent(Marcas.this, Shooting_Range.class);
                 bq.putExtra("marca", "bq");
                 startActivity(bq);
 
@@ -200,17 +200,35 @@ public class Marcas extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_home) {
-            // Handle the camera action
+
+            Intent home = new Intent(Marcas.this, MainActivity.class);
+            startActivity(home);
+
         } else if (id == R.id.nav_devi) {
+
+            Intent devi = new Intent(Marcas.this, MisDispositivos.class);
+            startActivity(devi);
 
         } else if (id == R.id.nav_news) {
 
+            Intent news = new Intent(Marcas.this, Check.class);
+            startActivity(news);
+
         } else if (id == R.id.nav_set) {
 
+            Intent set = new Intent(Marcas.this, Check.class);
+            startActivity(set);
 
         }  else if (id == R.id.nav_search) {
 
-        } else if (id == R.id.nav_contact) {}
+            Intent search = new Intent(Marcas.this, Check.class);
+            startActivity(search);
+
+        } else if (id == R.id.nav_contact) {
+
+            Intent contact = new Intent(Marcas.this, Check.class);
+            startActivity(contact);
+        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

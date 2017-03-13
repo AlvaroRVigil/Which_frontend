@@ -22,5 +22,6 @@
     <string name="title_activity_sistemas">Sistemas</string>
     <string name="title_activity_lista_marca">Lista_marca</string>
     <string name="title_activity_perfil_lista">PerfilLista</string>
+    <string name="title_activity_mis_dispositivos">MisDispositivos</string>
 
 </resources>

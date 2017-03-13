@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorAccent"
-    tools:context="proyecto.which.ListaMarca">
+    android:background="@color/flat_magenta"
+    tools:context="proyecto.which.MisDispositivos">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -21,7 +21,7 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_lista_marca" />
+    <include layout="@layout/content_mis_dispositivos" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"

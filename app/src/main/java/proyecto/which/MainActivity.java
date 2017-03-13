@@ -16,8 +16,9 @@ import android.widget.ImageButton;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    ImageButton siguiente;
-    ImageButton Iphone;
+    ImageButton ExplorarMarcas;
+    ImageButton ExplorarSistemas;
+    ImageButton Prueba;
 
 
     @Override
@@ -25,14 +26,28 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        siguiente =(ImageButton)findViewById(R.id.marcas);
+        ExplorarMarcas =(ImageButton)findViewById(R.id.marcas);
 
-        siguiente.setOnClickListener(new View.OnClickListener() {
+        ExplorarMarcas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View V) {
 
-                Intent siguiente = new Intent(MainActivity.this, Marcas.class);
-                startActivity(siguiente);
+                Intent ExplorarMarcas = new Intent(MainActivity.this, Marcas.class);
+                startActivity(ExplorarMarcas);
+
+            }
+
+
+        });
+
+        ExplorarSistemas =(ImageButton)findViewById(R.id.sistemas);
+
+        ExplorarSistemas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View V) {
+
+                Intent ExplorarSistemas = new Intent(MainActivity.this, Sistemas.class);
+                startActivity(ExplorarSistemas);
 
             }
 
@@ -40,17 +55,19 @@ public class MainActivity extends AppCompatActivity
         });
 
 
-        Iphone =(ImageButton)findViewById(R.id.top1_button);
+        Prueba =(ImageButton)findViewById(R.id.top1_button);
 
-        Iphone.setOnClickListener(new View.OnClickListener() {
+        Prueba.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View V) {
 
-                Intent siguiente = new Intent(MainActivity.this, Shooting_Range.class);
-                startActivity(siguiente);
+                Intent Prueba = new Intent(MainActivity.this, Shooting_Range.class);
+                startActivity(Prueba);
 
             }
         });
+
+
 
 
 
@@ -116,17 +133,35 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_home) {
-            // Handle the camera action
+
+            Intent home = new Intent(MainActivity.this, MainActivity.class);
+            startActivity(home);
+
         } else if (id == R.id.nav_devi) {
+
+            Intent devi = new Intent(MainActivity.this, MisDispositivos.class);
+            startActivity(devi);
 
         } else if (id == R.id.nav_news) {
 
+            Intent news = new Intent(MainActivity.this, Check.class);
+            startActivity(news);
+
         } else if (id == R.id.nav_set) {
 
+            Intent set = new Intent(MainActivity.this, Check.class);
+            startActivity(set);
 
         }  else if (id == R.id.nav_search) {
 
-        } else if (id == R.id.nav_contact) {}
+            Intent search = new Intent(MainActivity.this, Check.class);
+            startActivity(search);
+
+        } else if (id == R.id.nav_contact) {
+
+            Intent contact = new Intent(MainActivity.this, Check.class);
+            startActivity(contact);
+        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

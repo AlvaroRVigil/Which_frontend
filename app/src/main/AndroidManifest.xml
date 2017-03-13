@@ -34,7 +34,12 @@
         <activity
             android:name=".PerfilLista"
             android:label="@string/title_activity_perfil_lista"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".MisDispositivos"
+            android:label="@string/title_activity_mis_dispositivos"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".Check"></activity>
     </application>
 
 </manifest>

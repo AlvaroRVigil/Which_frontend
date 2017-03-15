@@ -1,4 +1,4 @@
-package proyecto.which;
+package proyecto.which.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,7 +13,12 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
 
-public class Marcas extends AppCompatActivity
+import proyecto.which.Check;
+import proyecto.which.MisDispositivos;
+import proyecto.which.R;
+import proyecto.which.Shooting_Range;
+
+public class MarcasActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     ImageButton samsung;
@@ -37,7 +42,7 @@ public class Marcas extends AppCompatActivity
             @Override
             public void onClick(View V) {
 
-                Intent samsung = new Intent(Marcas.this, ListaMarca.class);
+                Intent samsung = new Intent(MarcasActivity.this, ListaMarcaActivity.class);
                 samsung.putExtra("marca", "samsung");
                 startActivity(samsung);
 
@@ -55,7 +60,7 @@ public class Marcas extends AppCompatActivity
             @Override
             public void onClick(View V) {
 
-                Intent apple = new Intent(Marcas.this, ListaMarca.class);
+                Intent apple = new Intent(MarcasActivity.this, ListaMarcaActivity.class);
                 apple.putExtra("marca", "apple");
                 startActivity(apple);
 
@@ -73,7 +78,7 @@ public class Marcas extends AppCompatActivity
             @Override
             public void onClick(View V) {
 
-                Intent nokia = new Intent(Marcas.this, ListaMarca.class);
+                Intent nokia = new Intent(MarcasActivity.this, ListaMarcaActivity.class);
                 nokia.putExtra("marca", "nokia");
                 startActivity(nokia);
 
@@ -91,7 +96,7 @@ public class Marcas extends AppCompatActivity
             @Override
             public void onClick(View V) {
 
-                Intent bq = new Intent(Marcas.this, Shooting_Range.class);
+                Intent bq = new Intent(MarcasActivity.this, Shooting_Range.class);
                 bq.putExtra("marca", "bq");
                 startActivity(bq);
 
@@ -109,7 +114,7 @@ public class Marcas extends AppCompatActivity
             @Override
             public void onClick(View V) {
 
-                Intent huawai = new Intent(Marcas.this, ListaMarca.class);
+                Intent huawai = new Intent(MarcasActivity.this, ListaMarcaActivity.class);
                 huawai.putExtra("marca", "huawai");
                 startActivity(huawai);
 
@@ -127,7 +132,7 @@ public class Marcas extends AppCompatActivity
             @Override
             public void onClick(View V) {
 
-                Intent blackberry = new Intent(Marcas.this, ListaMarca.class);
+                Intent blackberry = new Intent(MarcasActivity.this, ListaMarcaActivity.class);
                 blackberry.putExtra("marca", "blackberry");
                 startActivity(blackberry);
 
@@ -201,32 +206,32 @@ public class Marcas extends AppCompatActivity
 
         if (id == R.id.nav_home) {
 
-            Intent home = new Intent(Marcas.this, MainActivity.class);
+            Intent home = new Intent(MarcasActivity.this, MainActivity.class);
             startActivity(home);
 
         } else if (id == R.id.nav_devi) {
 
-            Intent devi = new Intent(Marcas.this, MisDispositivos.class);
+            Intent devi = new Intent(MarcasActivity.this, MisDispositivos.class);
             startActivity(devi);
 
         } else if (id == R.id.nav_news) {
 
-            Intent news = new Intent(Marcas.this, Check.class);
+            Intent news = new Intent(MarcasActivity.this, Check.class);
             startActivity(news);
 
         } else if (id == R.id.nav_set) {
 
-            Intent set = new Intent(Marcas.this, Check.class);
+            Intent set = new Intent(MarcasActivity.this, Check.class);
             startActivity(set);
 
         }  else if (id == R.id.nav_search) {
 
-            Intent search = new Intent(Marcas.this, Check.class);
+            Intent search = new Intent(MarcasActivity.this, Check.class);
             startActivity(search);
 
         } else if (id == R.id.nav_contact) {
 
-            Intent contact = new Intent(Marcas.this, Check.class);
+            Intent contact = new Intent(MarcasActivity.this, Check.class);
             startActivity(contact);
         }
 

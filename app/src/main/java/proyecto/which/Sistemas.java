@@ -13,6 +13,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
 
+import proyecto.which.activities.ListaMarcaActivity;
+import proyecto.which.activities.MainActivity;
+
 public class Sistemas extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -35,7 +38,7 @@ public class Sistemas extends AppCompatActivity
             @Override
             public void onClick(View V) {
 
-                Intent android = new Intent(Sistemas.this, ListaMarca.class);
+                Intent android = new Intent(Sistemas.this, ListaMarcaActivity.class);
                 android.putExtra("marca", "android");
                 startActivity(android);
 
@@ -53,7 +56,7 @@ public class Sistemas extends AppCompatActivity
             @Override
             public void onClick(View V) {
 
-                Intent ios = new Intent(Sistemas.this, ListaMarca.class);
+                Intent ios = new Intent(Sistemas.this, ListaMarcaActivity.class);
                 ios.putExtra("marca", "ios");
                 startActivity(ios);
 
@@ -89,7 +92,7 @@ public class Sistemas extends AppCompatActivity
             @Override
             public void onClick(View V) {
 
-                Intent blackberryos = new Intent(Sistemas.this, ListaMarca.class);
+                Intent blackberryos = new Intent(Sistemas.this, ListaMarcaActivity.class);
                 blackberryos.putExtra("marca", "blackberryos");
                 startActivity(blackberryos);
 

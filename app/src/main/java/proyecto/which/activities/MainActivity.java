@@ -1,4 +1,4 @@
-package proyecto.which;
+package proyecto.which.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,6 +12,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
+
+import proyecto.which.Check;
+import proyecto.which.MisDispositivos;
+import proyecto.which.R;
+import proyecto.which.Sistemas;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -32,7 +37,7 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View V) {
 
-                Intent ExplorarMarcas = new Intent(MainActivity.this, Marcas.class);
+                Intent ExplorarMarcas = new Intent(MainActivity.this, MarcasActivity.class);
                 startActivity(ExplorarMarcas);
 
             }

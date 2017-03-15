@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name=".Check"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
@@ -23,28 +23,46 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Shooting_Range" />
+        <activity
+            android:name=".Shooting_Range"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Marcas"
             android:label="@string/title_activity_marcas"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
             android:name=".Sistemas"
             android:label="@string/title_activity_sistemas"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
             android:name=".ListaMarca"
             android:label="@string/title_activity_lista_marca"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
             android:name=".PerfilLista"
             android:label="@string/title_activity_perfil_lista"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
             android:name=".MisDispositivos"
             android:label="@string/title_activity_mis_dispositivos"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
-        <activity android:name=".Check" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/title_activity_login" />
+        <activity
+            android:name=".TokenActivity"
+            android:label="@string/title_activity_token"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>

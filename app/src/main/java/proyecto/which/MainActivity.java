@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View V) {
 
-                Intent Prueba = new Intent(MainActivity.this, Shooting_Range.class);
+                Intent Prueba = new Intent(MainActivity.this,Check.class);
                 startActivity(Prueba);
 
             }

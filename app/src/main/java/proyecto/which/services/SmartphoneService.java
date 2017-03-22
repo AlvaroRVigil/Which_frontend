@@ -41,6 +41,10 @@ public interface SmartphoneService {
     @GET("api/smartphones/byModelo/{modelo}")
     Call<List<Smartphone>> getSmartphoneByModelo(
             @Header("Authorization") String Authorization,
-            @Path("name") String modelo);
+            @Path("modelo") String modelo);
 
+    @GET("api/smartphones/byMarca/{marca}")
+    Call<List<Smartphone>> getSmartphoneByMarca(
+            @Header("Authorization") String Authorization,
+            @Path("marca") String marca);
 }

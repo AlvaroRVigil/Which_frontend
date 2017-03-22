@@ -83,8 +83,7 @@ public class SmartphoneManager {
 
     /* GET SMARTPHONES BY MODELO */
 
-    public synchronized void getSmartphoneByModelo(final SmartphoneCallback smartphoneCallback,String modelo) {
-        // Call<List<Apuesta>> call = playerService.getAllPlayer(UserLoginManager.getInstance(context).getBearerToken());
+    public synchronized void getSmartphoneByModelo(final SmartphoneCallback smartphoneCallback, String modelo) {
         Call<List<Smartphone>> call = smartphoneService.getSmartphoneByModelo(UserLoginManager.getInstance().getBearerToken(), modelo);
         call.enqueue(new Callback<List<Smartphone>>() {
             @Override
@@ -103,6 +102,32 @@ public class SmartphoneManager {
             @Override
             public void onFailure(Call<List<Smartphone>> call, Throwable t) {
                 Log.e("SmartphoneManager->", "getSmartphoneByModelo: " + t);
+                smartphoneCallback.onFailure(t);
+            }
+        });
+    }
+
+    /* GET SMARTPHONES BY MARCA */
+
+    public synchronized void getSmartphoneByMarca(final SmartphoneCallback smartphoneCallback, String marca) {
+        Call<List<Smartphone>> call = smartphoneService.getSmartphoneByMarca(UserLoginManager.getInstance().getBearerToken(), marca);
+        call.enqueue(new Callback<List<Smartphone>>() {
+            @Override
+            public void onResponse(Call<List<Smartphone>> call, Response<List<Smartphone>> response) {
+                smartphones = response.body();
+
+                int code = response.code();
+
+                if (code == 200 || code == 201) {
+                    smartphoneCallback.onSuccess(smartphones);
+                } else {
+                    smartphoneCallback.onFailure(new Throwable("ERROR" + code + ", " + response.raw().message()));
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<Smartphone>> call, Throwable t) {
+                Log.e("SmartphoneManager->", "getSmartphoneByMarca: " + t);
                 smartphoneCallback.onFailure(t);
             }
         });

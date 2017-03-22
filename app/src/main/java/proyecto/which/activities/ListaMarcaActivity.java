@@ -58,8 +58,11 @@ public class ListaMarcaActivity extends AppCompatActivity implements SmartphoneC
 
     @Override
     protected void onResume() {
+        // Sirve para recoger los extra que recibimos de MarcasActivity.java a la hora de hacer clic
+        // en un boton o en otro dependiendo de la marca donde se ha hecho click.
+        Bundle bundle = getIntent().getExtras();
         super.onResume();
-        SmartphoneManager.getInstance().getAllSmartphone(ListaMarcaActivity.this);
+        SmartphoneManager.getInstance().getSmartphoneByMarca(ListaMarcaActivity.this, bundle.getString("marca"));
     }
 
     private void setupRecyclerView(@NonNull RecyclerView recyclerView) {

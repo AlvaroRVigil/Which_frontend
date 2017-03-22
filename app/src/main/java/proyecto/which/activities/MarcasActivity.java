@@ -16,7 +16,6 @@ import android.widget.ImageButton;
 import proyecto.which.Check;
 import proyecto.which.MisDispositivos;
 import proyecto.which.R;
-import proyecto.which.Shooting_Range;
 
 public class MarcasActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -34,108 +33,71 @@ public class MarcasActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_marcas);
 
-
-
         samsung =(ImageButton)findViewById(R.id.Samsung);
-
         samsung.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View V) {
-
                 Intent samsung = new Intent(MarcasActivity.this, ListaMarcaActivity.class);
-                samsung.putExtra("marca", "samsung");
+                samsung.putExtra("marca", "Samsung");
                 startActivity(samsung);
-
             }
-
-
         });
 
-
-
-
         apple =(ImageButton)findViewById(R.id.Apple);
-
         apple.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View V) {
-
                 Intent apple = new Intent(MarcasActivity.this, ListaMarcaActivity.class);
-                apple.putExtra("marca", "apple");
+                apple.putExtra("marca", "Apple");
                 startActivity(apple);
-
             }
 
 
         });
 
-
-
-
         nokia =(ImageButton)findViewById(R.id.Nokia);
-
         nokia.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View V) {
-
                 Intent nokia = new Intent(MarcasActivity.this, ListaMarcaActivity.class);
-                nokia.putExtra("marca", "nokia");
+                nokia.putExtra("marca", "Nokia");
                 startActivity(nokia);
-
             }
 
 
         });
 
-
-
-
         bq =(ImageButton)findViewById(R.id.BQ);
-
         bq.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View V) {
-
-                Intent bq = new Intent(MarcasActivity.this, Shooting_Range.class);
-                bq.putExtra("marca", "bq");
+                Intent bq = new Intent(MarcasActivity.this, ListaMarcaActivity.class);
+                bq.putExtra("marca", "Bq");
                 startActivity(bq);
-
             }
 
 
         });
 
-
-
-
         huawai =(ImageButton)findViewById(R.id.Huawai);
-
         huawai.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View V) {
-
                 Intent huawai = new Intent(MarcasActivity.this, ListaMarcaActivity.class);
-                huawai.putExtra("marca", "huawai");
+                huawai.putExtra("marca", "Huawai");
                 startActivity(huawai);
-
             }
 
 
         });
 
-
-
-
         blackberry =(ImageButton)findViewById(R.id.Blackberry);
-
         blackberry.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View V) {
-
                 Intent blackberry = new Intent(MarcasActivity.this, ListaMarcaActivity.class);
-                blackberry.putExtra("marca", "blackberry");
+                blackberry.putExtra("marca", "BlackBerry");
                 startActivity(blackberry);
-
             }
 
 

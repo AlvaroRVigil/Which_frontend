@@ -113,8 +113,9 @@ public class LoginActivity extends AppCompatActivity implements LoginCallback {
     @Override
     public void onSuccess(UserToken userToken) {
         showProgress(false);
-
-        Intent intent = new Intent(LoginActivity.this, TokenActivity.class);
+// En el caso de que el el login sea correcto, le asignamos cual será la activity que se
+// abrirá a continuación, en ese caso abrimos la pantalla principal
+        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
         startActivity(intent);
         finish();
     }

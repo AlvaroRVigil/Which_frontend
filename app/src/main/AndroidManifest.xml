@@ -33,7 +33,7 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".Sistemas"
+            android:name=".activities.SistemasActivity"
             android:label="@string/title_activity_sistemas"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />

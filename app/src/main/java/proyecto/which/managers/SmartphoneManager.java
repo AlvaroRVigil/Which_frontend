@@ -132,4 +132,29 @@ public class SmartphoneManager {
             }
         });
     }
+
+    /* GET SMARTPHONES BY SO */
+
+    public synchronized void getSmartphoneBySo(final SmartphoneCallback smartphoneCallback, String so) {
+        Call<List<Smartphone>> call = smartphoneService.getSmartphoneBySo(UserLoginManager.getInstance().getBearerToken(), so);
+        call.enqueue(new Callback<List<Smartphone>>() {
+            @Override
+            public void onResponse(Call<List<Smartphone>> call, Response<List<Smartphone>> response) {
+
+            smartphones = response.body();
+
+            int code = response.code();
+
+                if (code == 200 || code == 201) {
+                smartphoneCallback.onSuccess(smartphones);
+            } else {
+                smartphoneCallback.onFailure(new Throwable("ERROR" + code + ", " + response.raw().message()));
+            }
+        }
+    public void onFailure(Call<List<Smartphone>> call, Throwable t) {
+                Log.e("SmartphoneManager->", "getSmartphoneBySo: " + t);
+                smartphoneCallback.onFailure(t);
+            }
+        });
+    }
 }

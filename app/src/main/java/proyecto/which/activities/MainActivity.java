@@ -16,7 +16,6 @@ import android.widget.ImageButton;
 import proyecto.which.Check;
 import proyecto.which.MisDispositivos;
 import proyecto.which.R;
-import proyecto.which.Sistemas;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -51,7 +50,7 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View V) {
 
-                Intent ExplorarSistemas = new Intent(MainActivity.this, Sistemas.class);
+                Intent ExplorarSistemas = new Intent(MainActivity.this, SistemasActivity.class);
                 startActivity(ExplorarSistemas);
 
             }

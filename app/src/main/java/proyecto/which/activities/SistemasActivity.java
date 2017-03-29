@@ -1,4 +1,4 @@
-package proyecto.which;
+package proyecto.which.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,10 +13,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
 
-import proyecto.which.activities.ListaMarcaActivity;
-import proyecto.which.activities.MainActivity;
+import proyecto.which.Check;
+import proyecto.which.MisDispositivos;
+import proyecto.which.R;
 
-public class Sistemas extends AppCompatActivity
+public class SistemasActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     ImageButton android;
@@ -30,77 +31,53 @@ public class Sistemas extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sistemas);
 
-
-
         android =(ImageButton)findViewById(R.id.Android);
-
         android.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View V) {
-
-                Intent android = new Intent(Sistemas.this, ListaMarcaActivity.class);
-                android.putExtra("marca", "android");
+                Intent android = new Intent(SistemasActivity.this, ListaSistemaActivity.class);
+                android.putExtra("so", "Android");
                 startActivity(android);
-
             }
 
 
         });
 
-
-
-
         ios =(ImageButton)findViewById(R.id.iOS);
-
         ios.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View V) {
-
-                Intent ios = new Intent(Sistemas.this, ListaMarcaActivity.class);
-                ios.putExtra("marca", "ios");
+                Intent ios = new Intent(SistemasActivity.this, ListaSistemaActivity.class);
+                ios.putExtra("so", "iOS");
                 startActivity(ios);
-
             }
 
 
         });
 
-
-
-
         windows =(ImageButton)findViewById(R.id.Windows);
-
         windows.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View V) {
-
-                Intent windows = new Intent(Sistemas.this, Shooting_Range.class);
-                windows.putExtra("marca", "windows");
+                Intent windows = new Intent(SistemasActivity.this, ListaSistemaActivity.class);
+                windows.putExtra("so", "Windows");
                 startActivity(windows);
-
             }
 
 
         });
 
-
-
-
         blackberryos =(ImageButton)findViewById(R.id.Blackberryos);
-
         blackberryos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View V) {
-
-                Intent blackberryos = new Intent(Sistemas.this, ListaMarcaActivity.class);
-                blackberryos.putExtra("marca", "blackberryos");
+                Intent blackberryos = new Intent(SistemasActivity.this, ListaSistemaActivity.class);
+                blackberryos.putExtra("so", "BlackBerryOS");
                 startActivity(blackberryos);
-
             }
 
 
         });
-
 
 
 
@@ -166,32 +143,32 @@ public class Sistemas extends AppCompatActivity
 
         if (id == R.id.nav_home) {
 
-            Intent siguiente = new Intent(Sistemas.this, MainActivity.class);
+            Intent siguiente = new Intent(SistemasActivity.this, MainActivity.class);
             startActivity(siguiente);
 
         } else if (id == R.id.nav_devi) {
 
-            Intent siguiente = new Intent(Sistemas.this, MisDispositivos.class);
+            Intent siguiente = new Intent(SistemasActivity.this, MisDispositivos.class);
             startActivity(siguiente);
 
         } else if (id == R.id.nav_news) {
 
-            Intent siguiente = new Intent(Sistemas.this, Check.class);
+            Intent siguiente = new Intent(SistemasActivity.this, Check.class);
             startActivity(siguiente);
 
         } else if (id == R.id.nav_set) {
 
-            Intent siguiente = new Intent(Sistemas.this, Check.class);
+            Intent siguiente = new Intent(SistemasActivity.this, Check.class);
             startActivity(siguiente);
 
         }  else if (id == R.id.nav_search) {
 
-            Intent siguiente = new Intent(Sistemas.this, Check.class);
+            Intent siguiente = new Intent(SistemasActivity.this, Check.class);
             startActivity(siguiente);
 
         } else if (id == R.id.nav_contact) {
 
-            Intent siguiente = new Intent(Sistemas.this, Check.class);
+            Intent siguiente = new Intent(SistemasActivity.this, Check.class);
             startActivity(siguiente);
         }
 

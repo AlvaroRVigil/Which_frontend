@@ -105,7 +105,7 @@ public class ListaMarcaActivity extends AppCompatActivity implements SmartphoneC
         @Override
         public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
             View view = LayoutInflater.from(parent.getContext())
-                    .inflate(R.layout.content_perfil_lista, parent, false);
+                    .inflate(R.layout.content_perfil_marca, parent, false);
             return new ViewHolder(view);
         }
 
@@ -146,8 +146,8 @@ public class ListaMarcaActivity extends AppCompatActivity implements SmartphoneC
             public ViewHolder(View view) {
                 super(view);
                 mView = view;
-                nombrePerfilSmartphone = (TextView) view.findViewById(R.id.Nombre_perfil);
-                bateriaPerfilSmartphone = (TextView) view.findViewById(R.id.bateria);
+                nombrePerfilSmartphone = (TextView) view.findViewById(R.id.Nombre_perfil_marca);
+                bateriaPerfilSmartphone = (TextView) view.findViewById(R.id.bateria_marca);
             }
 
             @Override

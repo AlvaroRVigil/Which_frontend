@@ -54,5 +54,7 @@
     <string name="title_atleta_list">Atletas</string>
     <string name="title_player_detail">Player Detail</string>
     <string name="main_button">View players List</string>
+    <string name="title_activity_lista_sistemas">ListaSistemasActivity</string>
+    <string name="title_activity_perfil_sistema">PerfilSistemaActivity</string>
 
 </resources>

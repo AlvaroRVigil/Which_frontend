@@ -4,42 +4,105 @@
     android:id="@+id/check"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
+    android:background="@color/colorAccent"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="proyecto.which.Check">
 
     <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-        <ImageView
-            android:id="@+id/txtRotacion"
-            android:layout_width="wrap_content"
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            app:srcCompat="@mipmap/check1"
-            tools:layout_editor_absoluteX="21dp"
-            tools:layout_editor_absoluteY="112dp" />
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="171dp"
+            android:layout_weight="4.40"
+            android:background="@color/transparent"
+            android:paddingTop="15dp"
+            android:text="Iniciar sesión con"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="25sp"
+            android:textStyle="bold" />
 
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="wrap_content"
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:srcCompat="@mipmap/app_icon_full" />
-
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/textView2"
+            android:layout_marginTop="33dp"
+            android:layout_weight="4.40"
+            android:background="@color/transparent"
+            android:paddingTop="15dp"
+            android:text="Google"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="25sp"
+            android:textStyle="bold" />
     </RelativeLayout>
 
-    <Button
+    <ImageButton
         android:id="@+id/btnRotacion"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/relativeLayout4"
+        android:background="@color/transparent"
+        android:onClick="anima" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout4"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="71dp">
+
+            <ImageView
+                android:id="@+id/txtRotacion"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                app:srcCompat="@mipmap/google_log_light"
+                tools:layout_editor_absoluteX="21dp"
+                tools:layout_editor_absoluteY="112dp" />
+
+            <ImageButton
+                android:id="@+id/googleButton"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:background="@mipmap/google_log"
+                android:onClick="anima" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        app:srcCompat="@mipmap/log_pantallacompleta" />
+
+    <ImageView
+        android:id="@+id/log_which"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="62dp"
-        android:onClick="anima"
-        android:text="Button" />
+        android:layout_centerVertical="true"
+        app:srcCompat="@mipmap/log_which" />
+
+
 </RelativeLayout>

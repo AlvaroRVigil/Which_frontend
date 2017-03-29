@@ -246,7 +246,7 @@
 
 
                   <include
-                      layout="@layout/content_perfil_lista"
+                      layout="@layout/content_perfil_marca"
                       android:layout_width="match_parent"
                       android:layout_height="match_parent" />
 
@@ -264,7 +264,7 @@
                    android:layout_height="150dp">
 
                   <include
-                      layout="@layout/content_perfil_lista"
+                      layout="@layout/content_perfil_marca"
                       android:layout_width="match_parent"
                       android:layout_height="match_parent" />
                </RelativeLayout>
@@ -280,7 +280,7 @@
                    android:layout_height="150dp">
 
                   <include
-                      layout="@layout/content_perfil_lista"
+                      layout="@layout/content_perfil_marca"
                       android:layout_width="match_parent"
                       android:layout_height="match_parent" />
                </RelativeLayout>
@@ -296,7 +296,7 @@
                    android:layout_height="150dp">
 
                   <include
-                      layout="@layout/content_perfil_lista"
+                      layout="@layout/content_perfil_marca"
                       android:layout_width="match_parent"
                       android:layout_height="match_parent" />
                </RelativeLayout>
@@ -312,7 +312,7 @@
                    android:layout_height="150dp">
 
                   <include
-                      layout="@layout/content_perfil_lista"
+                      layout="@layout/content_perfil_marca"
                       android:layout_width="match_parent"
                       android:layout_height="match_parent" />
                </RelativeLayout>

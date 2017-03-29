@@ -19,8 +19,6 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
-
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -43,7 +41,7 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".PerfilLista"
+            android:name=".activities.PerfilMarcaActivity"
             android:label="@string/title_activity_perfil_lista"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
@@ -67,6 +65,14 @@
         <activity
             android:name=".activities.TokenActivity"
             android:label="@string/title_activity_token"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activities.ListaSistemaActivity"
+            android:label="@string/title_activity_lista_sistemas"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activities.PerfilSistemaActivity"
+            android:label="@string/title_activity_perfil_sistema"
             android:theme="@style/AppTheme"></activity>
     </application>
 

@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_shooting_range"
+    android:id="@+id/activity_perfil_marca"
     android:layout_width="match_parent"
     android:layout_height="150dp"
     android:background="@color/colorPrimary"
@@ -227,7 +227,7 @@
         android:layout_height="match_parent">
 
         <ImageView
-            android:id="@+id/Imagen_perfil"
+            android:id="@+id/Imagen_perfil_marca"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:srcCompat="@mipmap/movil0" />
@@ -242,7 +242,7 @@
         android:layout_toEndOf="@+id/relativeLayout">
 
         <TextView
-            android:id="@+id/Nombre_perfil"
+            android:id="@+id/Nombre_perfil_marca"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
@@ -257,8 +257,8 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_alignParentBottom="true"
-            android:layout_alignStart="@+id/Nombre_perfil"
-            android:layout_below="@+id/Nombre_perfil">
+            android:layout_alignStart="@+id/Nombre_perfil_marca"
+            android:layout_below="@+id/Nombre_perfil_marca">
 
             <ImageView
                 android:id="@+id/imageView6"
@@ -269,7 +269,7 @@
                 app:srcCompat="@mipmap/ic_bateria" />
 
             <TextView
-                android:id="@+id/bateria"
+                android:id="@+id/bateria_marca"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignBaseline="@+id/textView4"
@@ -285,7 +285,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginStart="2dp"
-                android:layout_toEndOf="@+id/bateria"
+                android:layout_toEndOf="@+id/bateria_marca"
                 android:text="mAh"
                 android:textSize="10sp" />
 

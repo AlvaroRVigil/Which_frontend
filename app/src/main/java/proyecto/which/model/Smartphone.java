@@ -1,5 +1,8 @@
 package proyecto.which.model;
 
+
+import java.util.Date;
+
 public class Smartphone {
 
     private Long id;
@@ -15,11 +18,14 @@ public class Smartphone {
     private EnumOS so;
     private Integer rom;
     private Integer proteccionPolvo;
+    private Integer puntuacion;
+    private String descripcion;
+    private Date fechaLancamiento;
 
     public Smartphone() {
     }
 
-    public Smartphone(Long id, EnumMarca marca, String modelo, Integer camara, Integer frontCamara, Integer bateria, Double pulgadasPantalla, Integer resolucionPantallaAlto, Integer resolucionPantallaAncho, Double ram, EnumOS so, Integer rom, Integer proteccionPolvo) {
+    public Smartphone(Long id, EnumMarca marca, String modelo, Integer camara, Integer frontCamara, Integer bateria, Double pulgadasPantalla, Integer resolucionPantallaAlto, Integer resolucionPantallaAncho, Double ram, EnumOS so, Integer rom, Integer proteccionPolvo, Integer puntuacion, String descripcion, Date fechaLancamiento) {
         this.id = id;
         this.marca = marca;
         this.modelo = modelo;
@@ -33,6 +39,9 @@ public class Smartphone {
         this.so = so;
         this.rom = rom;
         this.proteccionPolvo = proteccionPolvo;
+        this.puntuacion = puntuacion;
+        this.descripcion = descripcion;
+        this.fechaLancamiento = fechaLancamiento;
     }
 
     public Long getId() {
@@ -138,6 +147,29 @@ public class Smartphone {
     public void setProteccionPolvo(Integer proteccionPolvo) {
         this.proteccionPolvo = proteccionPolvo;
     }
+    public Integer getPuntuacion() {
+        return puntuacion;
+    }
+
+    public void setPuntuacion(Integer puntuacion) {
+        this.puntuacion = puntuacion;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public Date getFechaLancamiento() {
+        return fechaLancamiento;
+    }
+
+    public void setFechaLancamiento(Date fechaLancamiento) {
+        this.fechaLancamiento = fechaLancamiento;
+    }
 
 
     @Override
@@ -163,7 +195,13 @@ public class Smartphone {
         if (ram != null ? !ram.equals(that.ram) : that.ram != null) return false;
         if (so != that.so) return false;
         if (rom != null ? !rom.equals(that.rom) : that.rom != null) return false;
-        return proteccionPolvo != null ? proteccionPolvo.equals(that.proteccionPolvo) : that.proteccionPolvo == null;
+        if (proteccionPolvo != null ? !proteccionPolvo.equals(that.proteccionPolvo) : that.proteccionPolvo != null)
+            return false;
+        if (puntuacion != null ? !puntuacion.equals(that.puntuacion) : that.puntuacion != null)
+            return false;
+        if (descripcion != null ? !descripcion.equals(that.descripcion) : that.descripcion != null)
+            return false;
+        return fechaLancamiento != null ? fechaLancamiento.equals(that.fechaLancamiento) : that.fechaLancamiento == null;
 
     }
 
@@ -182,9 +220,11 @@ public class Smartphone {
         result = 31 * result + (so != null ? so.hashCode() : 0);
         result = 31 * result + (rom != null ? rom.hashCode() : 0);
         result = 31 * result + (proteccionPolvo != null ? proteccionPolvo.hashCode() : 0);
+        result = 31 * result + (puntuacion != null ? puntuacion.hashCode() : 0);
+        result = 31 * result + (descripcion != null ? descripcion.hashCode() : 0);
+        result = 31 * result + (fechaLancamiento != null ? fechaLancamiento.hashCode() : 0);
         return result;
     }
-
 
     @Override
     public String toString() {
@@ -202,6 +242,9 @@ public class Smartphone {
                 ", so=" + so +
                 ", rom=" + rom +
                 ", proteccionPolvo=" + proteccionPolvo +
+                ", puntuacion=" + puntuacion +
+                ", descripcion='" + descripcion + '\'' +
+                ", fechaLancamiento=" + fechaLancamiento +
                 '}';
     }
 }

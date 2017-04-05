@@ -22,8 +22,6 @@ import proyecto.which.model.Smartphone;
 
 public class ListaMarcaActivity extends AppCompatActivity implements SmartphoneCallback {
 
-    // Estas variables harán referencia a las id de los elementos en la vista atleta_list
-    // private boolean mTwoPane;
     private RecyclerView recyclerView;
     private List<Smartphone> smartphones;
 
@@ -42,12 +40,8 @@ public class ListaMarcaActivity extends AppCompatActivity implements SmartphoneC
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
 
-        recyclerView = (RecyclerView) findViewById(R.id.smartphone_list);
+        recyclerView = (RecyclerView) findViewById(R.id.smartphone_list_marca);
         assert recyclerView != null;
-
-       /* if (findViewById(R.id.atleta_detail_container) != null) {
-            mTwoPane = true;
-        }*/
     }
 
 //    @Override
@@ -71,8 +65,8 @@ public class ListaMarcaActivity extends AppCompatActivity implements SmartphoneC
     }
 
     @Override
-    public void onSuccess(List<Smartphone> smartphoneList) {
-        smartphones = smartphoneList;
+    public void onSuccess(List<Smartphone> smartphoneListMarca) {
+        smartphones = smartphoneListMarca;
         setupRecyclerView(recyclerView);
     }
 

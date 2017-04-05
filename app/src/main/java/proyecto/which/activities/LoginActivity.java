@@ -15,6 +15,7 @@ import android.view.inputmethod.EditorInfo;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import proyecto.which.R;
@@ -27,6 +28,8 @@ import proyecto.which.model.UserToken;
  */
 public class LoginActivity extends AppCompatActivity implements LoginCallback {
 
+    ImageButton masterkey;
+
     // UI references.
     private AutoCompleteTextView mEmailView;
     private EditText mPasswordView;
@@ -37,6 +40,23 @@ public class LoginActivity extends AppCompatActivity implements LoginCallback {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+
+        masterkey=(ImageButton)findViewById(R.id.masterkeyb);
+        masterkey.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View V) {
+                Intent masterkey = new Intent(LoginActivity.this, MainActivity.class);
+                startActivity(masterkey);
+            }
+        });
+
+
+
+
+
+
+
         // Set up the login form.
         mEmailView = (AutoCompleteTextView) findViewById(R.id.username);
         mPasswordView = (EditText) findViewById(R.id.password);

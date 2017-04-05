@@ -59,7 +59,7 @@ public class ListaSistemaActivity extends AppCompatActivity implements Smartphon
         // en un boton o en otro dependiendo del sistema donde se ha hecho click.
         Bundle bundle = getIntent().getExtras();
         super.onResume();
-        SmartphoneManager.getInstance().getSmartphoneBySo(ListaSistemaActivity.this, bundle.getString("modelo"));
+        SmartphoneManager.getInstance().getSmartphoneBySo(ListaSistemaActivity.this, bundle.getString("so"));
     }
 
     private void setupRecyclerView(@NonNull RecyclerView recyclerView) {

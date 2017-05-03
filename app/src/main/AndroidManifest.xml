@@ -73,6 +73,10 @@
         <activity
             android:name=".activities.PerfilSistemaActivity"
             android:label="@string/title_activity_perfil_sistema"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activities.BuscarActivity"
+            android:label="@string/title_activity_buscar"
             android:theme="@style/AppTheme"></activity>
     </application>
 

@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     ImageButton ExplorarMarcas;
+    ImageButton Buscar;
     ImageButton ExplorarSistemas;
     ImageButton Prueba;
 
@@ -29,6 +30,20 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Buscar =(ImageButton)findViewById(R.id.buscar);
+
+        Buscar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View V) {
+
+                Intent IntentBuscar = new Intent(MainActivity.this, BuscarActivity.class);
+                startActivity(IntentBuscar);
+
+            }
+
+
+        });
 
         ExplorarMarcas =(ImageButton)findViewById(R.id.marcas);
 

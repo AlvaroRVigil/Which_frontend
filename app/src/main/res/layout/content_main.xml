@@ -986,7 +986,7 @@
                             android:elevation="4dp">
 
                             <ImageButton
-                                android:id="@+id/imageButton5"
+                                android:id="@+id/buscar"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentEnd="true"

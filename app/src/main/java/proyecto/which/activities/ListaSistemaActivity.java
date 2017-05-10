@@ -47,10 +47,7 @@ public class ListaSistemaActivity extends AppCompatActivity implements Smartphon
 
         });
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        toolbar.setTitle(getTitle());
-
+        
         // Si hay actionbar (barra superior) mostramos el boton atras (la flecha en la izquierda)
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {

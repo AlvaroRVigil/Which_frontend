@@ -1,91 +1,41 @@
 package proyecto.which.activities;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.ImageButton;
 
 import proyecto.which.Check;
 import proyecto.which.MisDispositivos;
 import proyecto.which.R;
-import proyecto.which.Shooting_Range;
 
-public class MainActivity extends AppCompatActivity
+public class NoticiasActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    ImageButton ExplorarMarcas;
-    ImageButton Buscar;
-    ImageButton ExplorarSistemas;
-    ImageButton Prueba;
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_noticias);
 
-        Buscar =(ImageButton)findViewById(R.id.buscar);
-
-        Buscar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View V) {
-
-                Intent IntentBuscar = new Intent(MainActivity.this, BuscarActivity.class);
-                startActivity(IntentBuscar);
-
-            }
+        WebView myWebView = (WebView) this.findViewById(R.id.webView);
+        myWebView.loadUrl("https://www.movilzona.es/category/moviles/");
 
 
-        });
-
-        ExplorarMarcas =(ImageButton)findViewById(R.id.marcas);
-
-        ExplorarMarcas.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View V) {
-
-                Intent ExplorarMarcas = new Intent(MainActivity.this, MarcasActivity.class);
-                startActivity(ExplorarMarcas);
-
-            }
 
 
-        });
 
-        ExplorarSistemas =(ImageButton)findViewById(R.id.sistemas);
-
-        ExplorarSistemas.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View V) {
-
-                Intent ExplorarSistemas = new Intent(MainActivity.this, SistemasActivity.class);
-                startActivity(ExplorarSistemas);
-
-            }
-
-
-        });
-
-
-        Prueba =(ImageButton)findViewById(R.id.top1_button);
-
-        Prueba.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View V) {
-
-                Intent Prueba = new Intent(MainActivity.this,Check.class);
-                startActivity(Prueba);
-
-            }
-        });
 
 
 
@@ -154,31 +104,30 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.nav_home) {
 
-
+            Intent home = new Intent(NoticiasActivity.this, MainActivity.class);
+            startActivity(home);
 
         } else if (id == R.id.nav_devi) {
 
-            Intent devi = new Intent(MainActivity.this, MisDispositivos.class);
+            Intent devi = new Intent(NoticiasActivity.this, MisDispositivos.class);
             startActivity(devi);
 
         } else if (id == R.id.nav_news) {
 
-            Intent news = new Intent(MainActivity.this, NoticiasActivity.class);
-            startActivity(news);
 
         } else if (id == R.id.nav_set) {
 
-            Intent set = new Intent(MainActivity.this, Check.class);
+            Intent set = new Intent(NoticiasActivity.this, Check.class);
             startActivity(set);
 
         }  else if (id == R.id.nav_search) {
 
-            Intent search = new Intent(MainActivity.this, Check.class);
+            Intent search = new Intent(NoticiasActivity.this, Check.class);
             startActivity(search);
 
         } else if (id == R.id.nav_contact) {
 
-            Intent contact = new Intent(MainActivity.this, Check.class);
+            Intent contact = new Intent(NoticiasActivity.this, Check.class);
             startActivity(contact);
         }
 
@@ -188,3 +137,4 @@ public class MainActivity extends AppCompatActivity
     }
 
 }
+

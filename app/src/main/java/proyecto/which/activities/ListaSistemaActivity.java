@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import java.util.List;
@@ -25,11 +26,26 @@ public class ListaSistemaActivity extends AppCompatActivity implements Smartphon
 
     private RecyclerView recyclerView;
     private List<Smartphone> smartphones;
+    ImageButton back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_sistema);
+
+        back =(ImageButton)findViewById(R.id.back);
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View V) {
+
+                Intent Intentback = new Intent(ListaSistemaActivity.this, SistemasActivity.class);
+                startActivity(Intentback);
+
+            }
+
+
+        });
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);

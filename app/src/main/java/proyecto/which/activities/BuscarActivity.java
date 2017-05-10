@@ -1,5 +1,6 @@
 package proyecto.which.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -8,6 +9,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -15,10 +17,27 @@ import proyecto.which.R;
 
 public class BuscarActivity extends AppCompatActivity {
 
+    ImageButton back;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_buscar);
+
+
+        back =(ImageButton)findViewById(R.id.back);
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View V) {
+
+                Intent Intentback = new Intent(BuscarActivity.this, MainActivity.class);
+                startActivity(Intentback);
+
+            }
+
+
+        });
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -44,7 +63,6 @@ public class BuscarActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int position, long id)
             {
-                Toast.makeText(adapterView.getContext(), (String) adapterView.getItemAtPosition(position), Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -64,7 +82,6 @@ public class BuscarActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int position, long id)
             {
-                Toast.makeText(adapterView.getContext(), (String) adapterView.getItemAtPosition(position), Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -86,7 +103,6 @@ public class BuscarActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int position, long id)
             {
-                Toast.makeText(adapterView.getContext(), (String) adapterView.getItemAtPosition(position), Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -106,8 +122,7 @@ public class BuscarActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int position, long id)
             {
-                Toast.makeText(adapterView.getContext(), (String) adapterView.getItemAtPosition(position), Toast.LENGTH_SHORT).show();
-            }
+           }
 
             @Override
             public void onNothingSelected(AdapterView<?> parent)
@@ -126,7 +141,6 @@ public class BuscarActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int position, long id)
             {
-                Toast.makeText(adapterView.getContext(), (String) adapterView.getItemAtPosition(position), Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -146,8 +160,7 @@ public class BuscarActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int position, long id)
             {
-                Toast.makeText(adapterView.getContext(), (String) adapterView.getItemAtPosition(position), Toast.LENGTH_SHORT).show();
-            }
+           }
 
             @Override
             public void onNothingSelected(AdapterView<?> parent)

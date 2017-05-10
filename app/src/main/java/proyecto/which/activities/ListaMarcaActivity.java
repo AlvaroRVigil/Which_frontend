@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import java.util.List;
@@ -24,25 +25,36 @@ public class ListaMarcaActivity extends AppCompatActivity implements SmartphoneC
 
     private RecyclerView recyclerView;
     private List<Smartphone> smartphones;
+    ImageButton back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_marca);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        toolbar.setTitle(getTitle());
+        back =(ImageButton)findViewById(R.id.back);
 
-        // Si hay actionbar (barra superior) mostramos el boton atras (la flecha en la izquierda)
-        ActionBar actionBar = getSupportActionBar();
-        if (actionBar != null) {
-            actionBar.setDisplayHomeAsUpEnabled(true);
-        }
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View V) {
+
+                Intent Intentback = new Intent(ListaMarcaActivity.this, MarcasActivity.class);
+                startActivity(Intentback);
+
+            }
+
+
+        });
+
+
+
+
 
         recyclerView = (RecyclerView) findViewById(R.id.smartphone_list_marca);
         assert recyclerView != null;
     }
+
+
 
 //    @Override
 //    protected void onPostResume() {

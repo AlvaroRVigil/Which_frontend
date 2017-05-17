@@ -92,7 +92,7 @@ public class BuscarActivity extends AppCompatActivity {
             }
         });
 
-
+/*
 
         // precioMin
         Spinner spinnerpreciomin = (Spinner) findViewById(R.id.precioMin);
@@ -113,7 +113,7 @@ public class BuscarActivity extends AppCompatActivity {
             }
         });
 
-        // precioMax
+         precioMax
         Spinner spinnerpreciomax = (Spinner) findViewById(R.id.precioMax);
         String[] valorespreciomax = {"1500","1000","800","600","400","200","0"};
         spinnerpreciomax.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, valorespreciomax));
@@ -130,7 +130,7 @@ public class BuscarActivity extends AppCompatActivity {
                 // vacio
 
             }
-        });
+        });*/
 
         // memoMin
         Spinner spinnermemomin = (Spinner) findViewById(R.id.memoMin);

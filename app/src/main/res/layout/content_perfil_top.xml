@@ -236,6 +236,12 @@
             android:layout_height="165dp"
             android:background="@color/transparent">
 
+            <ImageButton
+                android:id="@+id/enlace_perfil_top"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srcCompat="@color/transparent" />
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
@@ -260,8 +266,8 @@
                     android:fadeScrollbars="true"
                     android:max="100"
                     android:progress="82"
-                    android:progressBackgroundTint="@color/colorPrimary"
-                    android:progressTint="?attr/colorAccent"
+                    android:progressBackgroundTint="@color/colorPrimaryDark"
+                    android:progressTint="@color/extra"
                     android:rotation="270"
                     android:saveEnabled="true"
                     android:scaleX="0.5"
@@ -285,7 +291,7 @@
                     android:layout_toEndOf="@+id/Imagen_perfil_top"
                     android:gravity="center_horizontal"
                     android:text="Smart"
-                    android:textColor="@color/Which" />
+                    android:textColor="@color/colorPrimaryDark" />
 
                 <TextView
                     android:id="@+id/percent_perfil_top"
@@ -321,7 +327,7 @@
             android:layout_marginBottom="3dp"
             android:gravity="bottom|center_horizontal"
             android:text="Galaxy S7"
-            android:textColor="@color/colorPrimaryDark"
+            android:textColor="@color/colorPrimary"
             android:textSize="18sp" />
 
     </RelativeLayout>

@@ -75,17 +75,7 @@ public class MainActivity extends AppCompatActivity
         });
 
 
-        Prueba =(ImageButton)findViewById(R.id.top1_button);
 
-        Prueba.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View V) {
-
-                Intent Prueba = new Intent(MainActivity.this,Check.class);
-                startActivity(Prueba);
-
-            }
-        });
 
 
 

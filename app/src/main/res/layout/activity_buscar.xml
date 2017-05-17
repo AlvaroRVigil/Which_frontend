@@ -80,7 +80,7 @@
                         android:id="@+id/cbrom"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/barprecio"
+                        android:layout_below="@+id/cbsistemas"
                         android:layout_marginTop="20dp"
                         android:orientation="horizontal">
 
@@ -287,79 +287,79 @@
                         </TableLayout>
                     </LinearLayout>
 
-                    <LinearLayout
-                        android:id="@+id/barprecio"
+                    <!-- <LinearLayout
+                    android:id="@+id/barprecio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cbsistemas"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <TableLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/cbsistemas"
-                        android:layout_marginTop="20dp"
-                        android:orientation="horizontal">
+                        android:layout_height="match_parent">
 
-                        <TableLayout
+                        <TableRow
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent">
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="5dp">
 
-                            <TableRow
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_marginBottom="5dp">
+                            <TextView
+                                android:id="@+id/precio"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Precio"
+                                android:textSize="20sp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="300dp"
+                                android:layout_height="30dp">
+
+                                <Spinner
+                                    android:id="@+id/precioMax"
+                                    android:layout_width="110dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignTop="@+id/precioMin"
+                                    android:layout_toEndOf="@+id/textView99"
+                                    android:layout_weight="1" />
 
                                 <TextView
-                                    android:id="@+id/precio"
+                                    android:id="@+id/textView99"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Precio"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_marginEnd="10dp"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_toEndOf="@+id/precioMin"
+                                    android:layout_weight="1"
+                                    android:gravity="top"
+                                    android:text="&lt;"
+                                    android:textAlignment="center"
                                     android:textSize="20sp" />
-                            </TableRow>
 
-                            <TableRow
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical">
+                                <Spinner
+                                    android:id="@+id/precioMin"
+                                    android:layout_width="110dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_weight="1"
+                                    android:minWidth="@dimen/activity_vertical_margin" />
 
-                                <RelativeLayout
-                                    android:layout_width="300dp"
-                                    android:layout_height="30dp">
+                            </RelativeLayout>
 
-                                    <Spinner
-                                        android:id="@+id/precioMax"
-                                        android:layout_width="110dp"
-                                        android:layout_height="wrap_content"
-                                        android:layout_alignTop="@+id/precioMin"
-                                        android:layout_toEndOf="@+id/textView99"
-                                        android:layout_weight="1" />
+                        </TableRow>
 
-                                    <TextView
-                                        android:id="@+id/textView99"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_alignParentTop="true"
-                                        android:layout_marginEnd="10dp"
-                                        android:layout_marginStart="10dp"
-                                        android:layout_toEndOf="@+id/precioMin"
-                                        android:layout_weight="1"
-                                        android:gravity="top"
-                                        android:text="&lt;"
-                                        android:textAlignment="center"
-                                        android:textSize="20sp" />
-
-                                    <Spinner
-                                        android:id="@+id/precioMin"
-                                        android:layout_width="110dp"
-                                        android:layout_height="wrap_content"
-                                        android:layout_alignParentBottom="true"
-                                        android:layout_alignParentStart="true"
-                                        android:layout_marginLeft="10dp"
-                                        android:layout_marginStart="10dp"
-                                        android:layout_weight="1"
-                                        android:minWidth="@dimen/activity_vertical_margin" />
-
-                                </RelativeLayout>
-
-                            </TableRow>
-
-                        </TableLayout>
-                    </LinearLayout>
+                    </TableLayout>
+                </LinearLayout> -->
 
                     <LinearLayout
                         android:id="@+id/cbmarcas"

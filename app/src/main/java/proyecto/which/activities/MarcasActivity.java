@@ -5,15 +5,13 @@ import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
 
-import proyecto.which.Check;
+import proyecto.which.SplashActivity;
 import proyecto.which.MisDispositivos;
 import proyecto.which.R;
 
@@ -188,23 +186,19 @@ public class MarcasActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_news) {
 
-            Intent news = new Intent(MarcasActivity.this, Check.class);
+            Intent news = new Intent(MarcasActivity.this, SplashActivity.class);
             startActivity(news);
 
         } else if (id == R.id.nav_set) {
 
-            Intent set = new Intent(MarcasActivity.this, Check.class);
+            Intent set = new Intent(MarcasActivity.this, SplashActivity.class);
             startActivity(set);
 
         }  else if (id == R.id.nav_search) {
 
-            Intent search = new Intent(MarcasActivity.this, Check.class);
+            Intent search = new Intent(MarcasActivity.this, SplashActivity.class);
             startActivity(search);
 
-        } else if (id == R.id.nav_contact) {
-
-            Intent contact = new Intent(MarcasActivity.this, Check.class);
-            startActivity(contact);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

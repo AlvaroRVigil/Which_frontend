@@ -20,16 +20,12 @@
             android:icon="@drawable/ic_menu_set"
             android:title="Ajustes" />
     </group>
-    <item android:title="Communicate">
+    <item android:title="Administrador">
         <menu>
             <item
                 android:id="@+id/nav_search"
                 android:icon="@drawable/ic_menu_search"
-                android:title="Buscar" />
-            <item
-                android:id="@+id/nav_contact"
-                android:icon="@drawable/ic_menu_contact"
-                android:title="Contacta" />
+                android:title="Iniciar sesión" />
         </menu>
     </item>
 

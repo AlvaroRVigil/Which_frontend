@@ -67,6 +67,10 @@
             android:name=".activities.BuscarActivity"
             android:label="@string/title_activity_buscar"
             android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activities.ListaBuscarActivity"
+            android:label="@string/title_activity_ListaBuscar"
+            android:theme="@style/AppTheme" />
         <activity android:name=".activities.NoticiasActivity" />
 
     </application>

@@ -57,6 +57,7 @@
     <string name="title_activity_lista_sistemas">ListaSistemasActivity</string>
     <string name="title_activity_perfil_sistema">PerfilSistemaActivity</string>
     <string name="title_activity_buscar">Buscar</string>
+    <string name="title_activity_ListaBuscar">ListaBuscar</string>
 
     <!-- Strings related to Settings -->
 

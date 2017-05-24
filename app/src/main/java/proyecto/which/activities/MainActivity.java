@@ -144,7 +144,9 @@ public class MainActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            return true;
+
+            Intent sett = new Intent(MainActivity.this, Shooting_Range.class);
+            startActivity(sett);
         }
 
         return super.onOptionsItemSelected(item);
@@ -178,12 +180,6 @@ public class MainActivity extends AppCompatActivity
         }  else if (id == R.id.nav_search) {
 
             Intent search = new Intent(MainActivity.this, LoginActivity.class);
-            startActivity(search);
-
-        }
-        else if (id == R.id.action_settings) {
-
-            Intent search = new Intent(MainActivity.this, Shooting_Range.class);
             startActivity(search);
 
         }

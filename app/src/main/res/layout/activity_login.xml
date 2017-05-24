@@ -77,26 +77,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <ImageButton
-                    android:id="@+id/masterkeyb"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@color/transparent"
-                    android:scaleX="0.5"
-                    android:scaleY="0.5"
-                    app:srcCompat="@mipmap/app_icon_full"
-                    android:layout_alignParentTop="true"
-                    android:layout_centerHorizontal="true" />
-
-                <TextView
-                    android:id="@+id/textView5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentBottom="true"
-                    android:layout_centerHorizontal="true"
-                    android:paddingBottom="60dp"
-                    android:text="Master Key"
-                    android:textSize="20sp" />
             </RelativeLayout>
 
         </LinearLayout>

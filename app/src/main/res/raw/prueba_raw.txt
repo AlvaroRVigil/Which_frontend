@@ -1,0 +1,16 @@
+try
+{
+    InputStream fraw =
+        getResources().openRawResource(R.raw.prueba_raw);
+
+    BufferedReader brin =
+        new BufferedReader(new InputStreamReader(fraw));
+
+    String linea = brin.readLine();
+
+    fraw.close();
+}
+catch (Exception ex)
+{
+    Log.e("Ficheros", "Error al leer fichero desde recurso raw");
+}

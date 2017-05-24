@@ -13,16 +13,17 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
 
-import proyecto.which.Check;
+import proyecto.which.Shooting_Range;
+import proyecto.which.SplashActivity;
 import proyecto.which.MisDispositivos;
 import proyecto.which.R;
-import proyecto.which.Shooting_Range;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     ImageButton ExplorarMarcas;
     ImageButton Buscar;
+    ImageButton MisDispositivos;
     ImageButton ExplorarSistemas;
     ImageButton Prueba;
 
@@ -39,6 +40,19 @@ public class MainActivity extends AppCompatActivity
             public void onClick(View V) {
 
                 Intent IntentBuscar = new Intent(MainActivity.this, BuscarActivity.class);
+                startActivity(IntentBuscar);
+
+            }
+
+
+        });
+        MisDispositivos =(ImageButton)findViewById(R.id.misDispositivos);
+
+        MisDispositivos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View V) {
+
+                Intent IntentBuscar = new Intent(MainActivity.this, MisDispositivos.class);
                 startActivity(IntentBuscar);
 
             }
@@ -158,18 +172,20 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_set) {
 
-            Intent set = new Intent(MainActivity.this, Check.class);
+            Intent set = new Intent(MainActivity.this, SplashActivity.class);
             startActivity(set);
 
         }  else if (id == R.id.nav_search) {
 
-            Intent search = new Intent(MainActivity.this, Check.class);
+            Intent search = new Intent(MainActivity.this, LoginActivity.class);
             startActivity(search);
 
-        } else if (id == R.id.nav_contact) {
+        }
+        else if (id == R.id.action_settings) {
 
-            Intent contact = new Intent(MainActivity.this, Check.class);
-            startActivity(contact);
+            Intent search = new Intent(MainActivity.this, Shooting_Range.class);
+            startActivity(search);
+
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

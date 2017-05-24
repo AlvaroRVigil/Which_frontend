@@ -42,14 +42,7 @@ public class LoginActivity extends AppCompatActivity implements LoginCallback {
         setContentView(R.layout.activity_login);
 
 
-        masterkey=(ImageButton)findViewById(R.id.masterkeyb);
-        masterkey.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View V) {
-                Intent masterkey = new Intent(LoginActivity.this, MainActivity.class);
-                startActivity(masterkey);
-            }
-        });
+
 
 
 
@@ -100,14 +93,14 @@ public class LoginActivity extends AppCompatActivity implements LoginCallback {
         boolean cancel = false;
         View focusView = null;
 
-        // Check for a valid password, if the user entered one.
+        // SplashActivity for a valid password, if the user entered one.
         if (!TextUtils.isEmpty(password) && !isPasswordValid(password)) {
             mPasswordView.setError(getString(R.string.error_invalid_password));
             focusView = mPasswordView;
             cancel = true;
         }
 
-        // Check for a valid username address.
+        // SplashActivity for a valid username address.
         if (TextUtils.isEmpty(username)) {
             mEmailView.setError(getString(R.string.error_field_required));
             focusView = mEmailView;

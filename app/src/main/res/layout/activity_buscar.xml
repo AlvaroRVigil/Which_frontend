@@ -458,8 +458,7 @@
                                     android:id="@+id/boxBberry"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Black Berry"
-                                    />
+                                    android:text="Black Berry" />
                             </TableRow>
 
                             <TableRow
@@ -468,10 +467,10 @@
                                 android:layout_marginLeft="20dp">
 
                                 <CheckBox
-                                    android:id="@+id/boxOtrasmarcas"
+                                    android:id="@+id/boxBq"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Otras" />
+                                    android:text="BQ" />
                             </TableRow>
 
                         </TableLayout>
@@ -575,18 +574,6 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="Black Berry" />
-                            </TableRow>
-
-                            <TableRow
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_marginLeft="20dp">
-
-                                <CheckBox
-                                    android:id="@+id/boxOtros"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Otros" />
                             </TableRow>
 
                         </TableLayout>

@@ -15,7 +15,7 @@
     <color name="flat_naranja">#f0d04e</color>
     <color name="flat_magenta">#e6567a</color>
     <color name="flat_lila">#cb70d7</color>
-    <color name="flat_azul">#7658f8</color>
+    <color name="flat_azul">#3287d8</color>
     <color name="flat_verde">#5bd999</color>
     <color name="extra">#2fba93</color>
     <color name="blue1">#009bc6</color>
@@ -24,4 +24,6 @@
     <color name="transparent">#00ffffff</color>
     <color name="Which">#00c8ff</color>
     <color name="newblack">#595959</color>
+    <color name="samsung">#0f29a0</color>
+    <color name="android">#94c23c</color>
 </resources>

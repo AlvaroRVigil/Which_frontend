@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_perfil_buscar"
+    android:layout_width="match_parent"
+    android:layout_height="220dp"
+    android:layout_marginTop="10dp"
+    android:background="@color/colorPrimary"
+    android:elevation="4dp">
+
+
+    <!-- <HorizontalScrollView
+         android:layout_width="match_parent"
+         android:layout_height="195dp">
+
+         <LinearLayout
+             android:layout_width="wrap_content"
+             android:layout_height="match_parent"
+             android:orientation="horizontal" >
+
+             <FrameLayout android:layout_height="165dp"
+                 android:layout_width="165dp"
+                 android:layout_marginRight="10dp">
+
+                 <ProgressBar
+                     style="?android:attr/progressBarStyleHorizontal"
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+                     android:id="@+id/progressBar10"
+                     android:max="100"
+                     android:progress="75"
+                     android:progressTint="?attr/colorAccent"
+                     android:fadeScrollbars="true"
+                     android:layout_alignParentStart="true"
+                     android:layout_centerVertical="false"
+                     android:progressBackgroundTint="@color/colorPrimary"
+                     android:rotation="270"
+                     android:saveEnabled="true"
+                     android:scaleX="1"
+                     android:scaleY="40"
+                     android:secondaryProgressTint="@android:color/transparent" />
+
+                 <ImageButton
+                     android:id="@+id/imageButton"
+                     android:elevation="1dp"
+                     android:background="@mipmap/movil1"
+                     android:layout_alignParentTop="true"
+                     android:layout_alignEnd="@+id/progressBar10"
+                     android:layout_alignParentStart="true"
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent" />
+             </FrameLayout>
+
+             <FrameLayout android:layout_height="165dp"
+                 android:layout_width="165dp"
+                 android:layout_marginRight="10dp">
+
+                 <ProgressBar
+                     style="?android:attr/progressBarStyleHorizontal"
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+                     android:id="@+id/progressBar101"
+                     android:max="100"
+                     android:progress="45"
+                     android:progressTint="?attr/colorAccent"
+                     android:fadeScrollbars="true"
+                     android:layout_alignParentStart="true"
+                     android:layout_centerVertical="false"
+                     android:progressBackgroundTint="@color/colorPrimary"
+                     android:rotation="270"
+                     android:saveEnabled="true"
+                     android:scaleX="1"
+                     android:scaleY="40"
+                     android:secondaryProgressTint="@android:color/transparent" />
+
+                 <ImageButton
+                     android:id="@+id/imageButton1"
+                     android:elevation="1dp"
+                     android:background="@mipmap/movil1"
+                     android:layout_alignParentTop="true"
+                     android:layout_alignEnd="@+id/progressBar10"
+                     android:layout_alignParentStart="true"
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent" />
+             </FrameLayout>
+
+             <FrameLayout android:layout_height="165dp"
+                 android:layout_width="165dp"
+                 android:layout_marginRight="10dp">
+
+                 <ProgressBar
+                     style="?android:attr/progressBarStyleHorizontal"
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+                     android:id="@+id/progressBar102"
+                     android:max="100"
+                     android:progress="85"
+                     android:progressTint="?attr/colorAccent"
+                     android:fadeScrollbars="true"
+                     android:layout_alignParentStart="true"
+                     android:layout_centerVertical="false"
+                     android:progressBackgroundTint="@color/colorPrimary"
+                     android:rotation="270"
+                     android:saveEnabled="true"
+                     android:scaleX="1"
+                     android:scaleY="40"
+                     android:secondaryProgressTint="@android:color/transparent" />
+
+                 <ImageButton
+                     android:id="@+id/imageButton2"
+                     android:elevation="1dp"
+                     android:background="@mipmap/movil1"
+                     android:layout_alignParentTop="true"
+                     android:layout_alignEnd="@+id/progressBar10"
+                     android:layout_alignParentStart="true"
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent" />
+             </FrameLayout>
+
+             <FrameLayout android:layout_height="165dp"
+                 android:layout_width="165dp"
+                 android:layout_marginRight="10dp">
+
+                 <ProgressBar
+                     style="?android:attr/progressBarStyleHorizontal"
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+                     android:id="@+id/progressBar103"
+                     android:max="100"
+                     android:progress="60"
+                     android:progressTint="?attr/colorAccent"
+                     android:fadeScrollbars="true"
+                     android:layout_alignParentStart="true"
+                     android:layout_centerVertical="false"
+                     android:progressBackgroundTint="@color/colorPrimary"
+                     android:rotation="270"
+                     android:saveEnabled="true"
+                     android:scaleX="1"
+                     android:scaleY="40"
+                     android:secondaryProgressTint="@android:color/transparent" />
+
+                 <ImageButton
+                     android:id="@+id/imageButton3"
+                     android:elevation="1dp"
+                     android:background="@mipmap/movil1"
+                     android:layout_alignParentTop="true"
+                     android:layout_alignEnd="@+id/progressBar10"
+                     android:layout_alignParentStart="true"
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent" />
+             </FrameLayout>
+
+             <FrameLayout android:layout_height="165dp"
+                 android:layout_width="165dp"
+                 android:layout_marginRight="10dp">
+
+                 <ProgressBar
+                     style="?android:attr/progressBarStyleHorizontal"
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+                     android:id="@+id/progressBar104"
+                     android:max="100"
+                     android:progress="89"
+                     android:progressTint="?attr/colorAccent"
+                     android:fadeScrollbars="true"
+                     android:layout_alignParentStart="true"
+                     android:layout_centerVertical="false"
+                     android:progressBackgroundTint="@color/colorPrimary"
+                     android:rotation="270"
+                     android:saveEnabled="true"
+                     android:scaleX="1"
+                     android:scaleY="40"
+                     android:secondaryProgressTint="@android:color/transparent" />
+
+                 <ImageButton
+                     android:id="@+id/imageButton4"
+                     android:elevation="1dp"
+                     android:background="@mipmap/movil1"
+                     android:layout_alignParentTop="true"
+                     android:layout_alignEnd="@+id/progressBar10"
+                     android:layout_alignParentStart="true"
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent" />
+             </FrameLayout>
+
+             <FrameLayout android:layout_height="165dp"
+                 android:layout_width="165dp">
+
+                 <ProgressBar
+                     style="?android:attr/progressBarStyleHorizontal"
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+                     android:id="@+id/progressBar105"
+                     android:max="100"
+                     android:progress="57"
+                     android:progressTint="?attr/colorAccent"
+                     android:fadeScrollbars="true"
+                     android:layout_alignParentStart="true"
+                     android:layout_centerVertical="false"
+                     android:progressBackgroundTint="@color/colorPrimary"
+                     android:rotation="270"
+                     android:saveEnabled="true"
+                     android:scaleX="1"
+                     android:scaleY="40"
+                     android:secondaryProgressTint="@android:color/transparent" />
+
+                 <ImageButton
+                     android:id="@+id/imageButton5"
+                     android:elevation="1dp"
+                     android:background="@mipmap/movil1"
+                     android:layout_alignParentTop="true"
+                     android:layout_alignEnd="@+id/progressBar10"
+                     android:layout_alignParentStart="true"
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent" />
+             </FrameLayout>
+         </LinearLayout>
+     </HorizontalScrollView> -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:background="@android:color/background_light"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="100dp"
+            android:layout_height="115dp">
+
+            <ImageView
+                android:id="@+id/Imagen_perfil_mejor"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srcCompat="@mipmap/movil0" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:paddingTop="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="false"
+                    android:layout_below="@+id/Dia_perfil_mejor">
+
+                    <TextView
+                        android:id="@+id/textView313"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:text="Cámara" />
+
+                    <RelativeLayout
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/textView313"
+                        android:layout_marginTop="5dp">
+
+                        <ImageView
+                            android:id="@+id/imageVi20"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentStart="false"
+                            android:layout_alignParentTop="false"
+                            android:layout_centerInParent="true"
+                            android:background="@mipmap/camara" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true">
+
+                            <TextView
+                                android:id="@+id/camara_perfil_mejor"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="12" />
+
+                            <TextView
+                                android:id="@+id/mpx"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_toEndOf="@+id/camara_perfil_mejor"
+                                android:text="Mpx" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="false"
+                    android:layout_below="@+id/Dia_perfil_mejor"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp">
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:text="Pantalla" />
+
+                    <RelativeLayout
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_alignParentStart="false"
+                        android:layout_below="@+id/textView3"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="5dp">
+
+                        <ImageView
+                            android:id="@+id/imageVi04"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentStart="false"
+                            android:layout_alignParentTop="false"
+                            android:layout_centerInParent="true"
+                            android:background="@mipmap/pantalla" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true">
+
+                            <TextView
+                                android:id="@+id/pantalla_perfil_mejor"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="5.1" />
+
+                            <TextView
+                                android:id="@+id/textView7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_toEndOf="@+id/pantalla_perfil_mejor"
+                                android:text='"' />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="false"
+                    android:layout_below="@+id/Dia_perfil_mejor">
+
+                    <TextView
+                        android:id="@+id/textView33"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:text="Batería" />
+
+                    <RelativeLayout
+                        android:id="@+id/relativeLayout3"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/textView33"
+                        android:layout_marginTop="5dp">
+
+                        <ProgressBar
+                            android:id="@+id/bar_bateria_mejor"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="60dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentStart="false"
+                            android:layout_alignParentTop="false"
+                            android:layout_centerInParent="true"
+                            android:indeterminate="false"
+                            android:max="4000"
+                            android:progress="3000"
+                            android:progressBackgroundTint="@color/colorPrimaryDark"
+                            android:progressTint="@color/extra"
+                            android:scaleY="10" />
+
+                        <ImageView
+                            android:id="@+id/imageVi0"
+                            android:layout_width="60dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentStart="false"
+                            android:layout_alignParentTop="false"
+                            android:layout_centerInParent="true"
+                            android:background="@mipmap/ic_bateria" />
+
+                        <RelativeLayout
+                            android:id="@+id/relativeLayout2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:paddingRight="7dp">
+
+                            <TextView
+                                android:id="@+id/bateria_perfil_mejor"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingRight="5dp"
+                                android:text="3000" />
+
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/top1"
+            android:layout_width="match_parent"
+            android:layout_height="115dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/relativeLayout">
+
+            <TextView
+                android:id="@+id/Nombre_perfil_mejor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:text="Samsung Galaxy S7 Edge"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/lanzamiento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/Nombre_perfil_mejor"
+                android:ems="10"
+                android:paddingTop="5px"
+                android:text="Fecha de lanzamiento: "
+                android:textColor="@android:color/darker_gray"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/Dia_perfil_mejor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/lanzamiento"
+                android:text="24"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lanzamiento"
+                android:layout_toEndOf="@+id/Dia_perfil_mejor"
+                android:paddingLeft="1sp"
+                android:paddingRight="1sp"
+                android:text="-"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/Mes_perfil_mejor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lanzamiento"
+                android:layout_toEndOf="@+id/textView10"
+                android:text="03"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lanzamiento"
+                android:layout_toEndOf="@+id/Mes_perfil_mejor"
+                android:paddingLeft="1sp"
+                android:paddingRight="1sp"
+                android:text="-"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/Anyo_perfil_mejor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lanzamiento"
+                android:layout_toEndOf="@+id/textView12"
+                android:text="2017"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="12sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/Dia_perfil_mejor">
+
+                <TextView
+                    android:id="@+id/sm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="false"
+                    android:layout_centerHorizontal="false"
+                    android:layout_centerVertical="false"
+                    android:gravity="center_vertical"
+                    android:text="Smart"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="15sp" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toEndOf="@+id/sm">
+
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        app:srcCompat="@mipmap/smartbubble" />
+
+                    <TextView
+                        android:id="@+id/smart_mejor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:text="20"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="15sp" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

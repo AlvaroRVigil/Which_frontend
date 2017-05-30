@@ -1,8 +1,12 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
     <item name="ic_menu_home" type="drawable">@android:drawable/ic_menu_add</item>
-    <item name="ic_menu_devi" type="drawable">@android:drawable/ic_menu_add</item>
-    <item name="ic_menu_news" type="drawable">@android:drawable/ic_menu_add</item>
-    <item name="ic_menu_undo" type="drawable">@android:drawable/ic_menu_add</item>
-    <item name="ic_menu_search" type="drawable">@android:drawable/ic_menu_search</item>
-    <item name="ic_menu_contact" type="drawable">@android:drawable/ic_menu_send</item>
+    <item name="ic_menu_home1" type="drawable">@android:drawable/ic_menu_add</item>
+    <item name="ic_menu_top" type="drawable">@android:drawable/ic_menu_add</item>
+    <item name="ic_menu_top1" type="drawable">@android:drawable/ic_menu_add</item>
+    <item name="ic_menu_buscar" type="drawable">@android:drawable/ic_menu_add</item>
+    <item name="ic_menu_buscar1" type="drawable">@android:drawable/ic_menu_add</item>
+    <item name="ic_menu_comparar" type="drawable">@android:drawable/ic_menu_add</item>
+    <item name="ic_menu_comparar1" type="drawable">@android:drawable/ic_menu_add</item>
+    <item name="ic_menu_noticias" type="drawable">@android:drawable/ic_menu_add</item>
+    <item name="ic_menu_noticias1" type="drawable">@android:drawable/ic_menu_add</item>
 </resources>

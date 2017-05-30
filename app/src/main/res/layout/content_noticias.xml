@@ -21,7 +21,7 @@
             android:id="@+id/textView6"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/Which"
+            android:background="@color/flat_magenta"
             android:elevation="@dimen/fab_margin"
             android:gravity="center_vertical|center_horizontal"
             android:text="Noticias"

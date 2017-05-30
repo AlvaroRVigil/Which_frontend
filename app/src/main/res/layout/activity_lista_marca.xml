@@ -21,7 +21,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 android:layout_weight="1"
-                android:background="@color/Which"
+                android:background="@color/flat_magenta"
                 android:gravity="center_vertical|center_horizontal"
                 android:text="Todos los modelos"
                 android:textColor="@color/colorPrimary"

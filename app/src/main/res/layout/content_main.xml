@@ -67,7 +67,7 @@
         <ScrollView
             style="@android:style/Widget.DeviceDefault.ScrollView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:scrollbarSize="0dp"
@@ -757,62 +757,69 @@
                 </LinearLayout>-->
 
                 <RelativeLayout
-                    android:id="@+id/Categorias"
+                    android:id="@+id/explorar"
                     android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_weight="4.40">
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp">
 
-                    <TableLayout
+                    <TextView
+                        android:id="@+id/explorar"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_alignParentStart="true"
                         android:layout_alignParentTop="true"
+                        android:gravity="center"
+                        android:text="Explorar"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textColorHighlight="@color/colorPrimaryDark"
+                        android:textSize="18sp" />
+
+                    <ImageButton
+                        android:id="@+id/todo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_below="@+id/explorar"
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
                         android:backgroundTint="@android:color/background_light"
-                        android:elevation="12dp">
+                        android:elevation="4dp"
+                        app:srcCompat="@mipmap/best" />
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/todo"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:elevation="1dp">
 
                         <TableRow
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:backgroundTint="@color/colorPrimary"
-                            android:elevation="4dp">
+                            android:layout_height="wrap_content"
+                            android:gravity="center">
 
                             <ImageButton
-                                android:id="@+id/buscar"
+                                android:id="@+id/marcas"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_alignParentEnd="true"
-                                android:layout_below="@+id/explorar"
+                                android:layout_alignParentEnd="false"
                                 android:layout_weight="1"
-                                android:background="@color/transparent"
-                                android:elevation="0dp"
-                                android:scaleType="fitCenter"
-                                app:srcCompat="@mipmap/m" />
+                                android:backgroundTint="@android:color/background_light"
+                                android:elevation="4dp"
+                                app:srcCompat="@mipmap/marcas" />
 
                             <ImageButton
-                                android:id="@+id/imageButton3"
+                                android:id="@+id/sistemas"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_alignParentEnd="true"
-                                android:layout_below="@+id/explorar"
+                                android:layout_alignParentEnd="false"
                                 android:layout_weight="1"
-                                android:background="@color/transparent"
-                                android:elevation="0dp"
-                                android:scaleType="fitCenter"
-                                app:srcCompat="@mipmap/c" />
-
-                            <ImageButton
-                                android:id="@+id/misDispositivos"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_alignParentEnd="true"
-                                android:layout_below="@+id/explorar"
-                                android:layout_weight="1"
-                                android:background="@color/transparent"
-                                android:elevation="0dp"
-                                android:scaleType="fitCenter"
-                                app:srcCompat="@mipmap/b" />
+                                android:backgroundTint="@android:color/background_light"
+                                android:elevation="4dp"
+                                app:srcCompat="@mipmap/sistemas_operativos" />
 
 
                         </TableRow>
@@ -881,54 +888,48 @@
                 <RelativeLayout
                     android:id="@+id/Categorias"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp">
-
-                    <TextView
-                        android:id="@+id/explorar"
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:layout_alignParentStart="true"
-                        android:layout_alignParentTop="true"
-                        android:text="Explorar"
-                        android:textAlignment="center"
-                        android:textColor="@color/colorPrimaryDark"
-                        android:textColorHighlight="@color/colorPrimaryDark"
-                        android:textSize="18sp" />
+                    android:layout_height="100dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="4.40">
 
                     <TableLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
-                        android:layout_marginTop="30dp"
-                        android:elevation="1dp">
+                        android:backgroundTint="@android:color/background_light"
+                        android:elevation="12dp">
 
                         <TableRow
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                            android:layout_height="match_parent"
+                            android:backgroundTint="@color/colorPrimary"
+                            android:elevation="4dp">
 
                             <ImageButton
-                                android:id="@+id/marcas"
+                                android:id="@+id/buscar"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentEnd="true"
                                 android:layout_below="@+id/explorar"
                                 android:layout_weight="1"
-                                android:backgroundTint="@android:color/background_light"
-                                android:elevation="4dp"
-                                app:srcCompat="@mipmap/marcas" />
+                                android:background="@color/transparent"
+                                android:elevation="0dp"
+                                android:scaleType="fitCenter"
+                                app:srcCompat="@mipmap/m" />
 
                             <ImageButton
-                                android:id="@+id/sistemas"
+                                android:id="@+id/imageButton3"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentEnd="true"
                                 android:layout_below="@+id/explorar"
                                 android:layout_weight="1"
-                                android:backgroundTint="@android:color/background_light"
-                                android:elevation="4dp"
-                                app:srcCompat="@mipmap/sistemas_operativos" />
+                                android:background="@color/transparent"
+                                android:elevation="0dp"
+                                android:scaleType="fitCenter"
+                                app:srcCompat="@mipmap/c" />
 
 
                         </TableRow>

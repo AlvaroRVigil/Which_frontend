@@ -21,18 +21,20 @@
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 android:layout_weight="1"
-                android:background="@color/blue1"
+                android:background="@color/flat_naranja"
                 android:gravity="center_vertical|center_horizontal"
                 android:text="Todos los modelos"
                 android:textColor="@color/colorPrimary"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true" />
 
             <ImageButton
                 android:id="@+id/back"
                 android:layout_width="?attr/actionBarSize"
                 android:layout_height="?attr/actionBarSize"
                 android:background="@color/transparent"
-                app:srcCompat="@mipmap/arrow" />
+                app:srcCompat="@mipmap/home" />
 
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar"
@@ -52,7 +54,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
-        <include layout="@layout/content_lista_buscar" />
+        <include layout="@layout/content_lista_mejor" />
     </FrameLayout>
 
 

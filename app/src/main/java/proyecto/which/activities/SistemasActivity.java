@@ -150,28 +150,59 @@ public class SistemasActivity extends AppCompatActivity
 
         if (id == R.id.nav_home) {
 
-            Intent siguiente = new Intent(SistemasActivity.this, MainActivity.class);
-            startActivity(siguiente);
+            Intent devi = new Intent(SistemasActivity.this, MainActivity.class);
+            startActivity(devi);
 
-        } else if (id == R.id.nav_devi) {
+        } else if (id == R.id.nav_home1) {
 
-            Intent siguiente = new Intent(SistemasActivity.this, MisDispositivos.class);
-            startActivity(siguiente);
+            Intent devi = new Intent(SistemasActivity.this, MainActivity.class);
+            startActivity(devi);
 
-        } else if (id == R.id.nav_news) {
+        }else if (id == R.id.nav_top) {
 
-            Intent siguiente = new Intent(SistemasActivity.this, SplashActivity.class);
-            startActivity(siguiente);
+            Intent devi = new Intent(SistemasActivity.this, ListaMejorActivity.class);
+            startActivity(devi);
 
-        } else if (id == R.id.nav_set) {
+        }
 
-            Intent siguiente = new Intent(SistemasActivity.this, SplashActivity.class);
-            startActivity(siguiente);
+        else if (id == R.id.nav_top1) {
 
-        }  else if (id == R.id.nav_search) {
+            Intent set = new Intent(SistemasActivity.this, ListaMejorActivity.class);
+            startActivity(set);
 
-            Intent siguiente = new Intent(SistemasActivity.this, LoginActivity.class);
-            startActivity(siguiente);
+        }  else if (id == R.id.nav_buscar) {
+
+            Intent search = new Intent(SistemasActivity.this, BuscarActivity.class);
+            startActivity(search);
+
+        }
+        else if (id == R.id.nav_buscar1) {
+
+            Intent search = new Intent(SistemasActivity.this, BuscarActivity.class);
+            startActivity(search);
+        }
+        else if (id == R.id.nav_comparar) {
+
+            Intent search = new Intent(SistemasActivity.this, SplashActivity.class);
+            startActivity(search);
+
+        }
+        else if (id == R.id.nav_comparar1) {
+
+            Intent search = new Intent(SistemasActivity.this, SplashActivity.class);
+            startActivity(search);
+
+        }
+        else if (id == R.id.nav_noticias) {
+
+            Intent search = new Intent(SistemasActivity.this, NoticiasActivity.class);
+            startActivity(search);
+
+        }
+        else if (id == R.id.nav_noticias1) {
+
+            Intent search = new Intent(SistemasActivity.this, NoticiasActivity.class);
+            startActivity(search);
 
         }
 

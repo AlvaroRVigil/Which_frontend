@@ -99,32 +99,62 @@ public class NoticiasActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-
         if (id == R.id.nav_home) {
 
-            Intent home = new Intent(NoticiasActivity.this, MainActivity.class);
-            startActivity(home);
-
-        } else if (id == R.id.nav_devi) {
-
-            Intent devi = new Intent(NoticiasActivity.this, MisDispositivos.class);
+            Intent devi = new Intent(NoticiasActivity.this, MainActivity.class);
             startActivity(devi);
 
-        } else if (id == R.id.nav_news) {
+        } else if (id == R.id.nav_home1) {
 
+            Intent devi = new Intent(NoticiasActivity.this, MainActivity.class);
+            startActivity(devi);
 
-        } else if (id == R.id.nav_set) {
+        }else if (id == R.id.nav_top) {
 
-            Intent set = new Intent(NoticiasActivity.this, SplashActivity.class);
-            startActivity(set);
-
-        }  else if (id == R.id.nav_search) {
-
-            Intent search = new Intent(NoticiasActivity.this, LoginActivity.class);
-            startActivity(search);
+            Intent devi = new Intent(NoticiasActivity.this, ListaMejorActivity.class);
+            startActivity(devi);
 
         }
 
+        else if (id == R.id.nav_top1) {
+
+            Intent set = new Intent(NoticiasActivity.this, ListaMejorActivity.class);
+            startActivity(set);
+
+        }  else if (id == R.id.nav_buscar) {
+
+            Intent search = new Intent(NoticiasActivity.this, BuscarActivity.class);
+            startActivity(search);
+
+        }
+        else if (id == R.id.nav_buscar1) {
+
+            Intent search = new Intent(NoticiasActivity.this, BuscarActivity.class);
+            startActivity(search);
+        }
+        else if (id == R.id.nav_comparar) {
+
+            Intent search = new Intent(NoticiasActivity.this, SplashActivity.class);
+            startActivity(search);
+
+        }
+        else if (id == R.id.nav_comparar1) {
+
+            Intent search = new Intent(NoticiasActivity.this, SplashActivity.class);
+            startActivity(search);
+
+        }
+        else if (id == R.id.nav_noticias) {
+
+
+
+        }
+        else if (id == R.id.nav_noticias1) {
+
+
+
+        }
+        
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;

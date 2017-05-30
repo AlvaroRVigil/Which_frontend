@@ -25,13 +25,110 @@ public class MainActivity extends AppCompatActivity
     ImageButton Buscar;
     ImageButton MisDispositivos;
     ImageButton ExplorarSistemas;
+    ImageButton Best;
     ImageButton Prueba;
-
+    ImageButton ic_inicio;
+    ImageButton ic_top;
+    ImageButton ic_buscar;
+    ImageButton ic_comparar;
+    ImageButton ic_noticias;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        
+        
+        /*---------------------------------------------------------BARRA--------------------------------------------------
+
+        ic_inicio =(ImageButton)findViewById(R.id.ic_inicio);
+
+        ic_inicio.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View V) {
+
+                Intent ic_inicio = new Intent(MainActivity.this, BuscarActivity.class);
+                startActivity(ic_inicio);
+            }
+        });
+
+                
+        ic_top =(ImageButton)findViewById(R.id.ic_top);
+
+        ic_top.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View V) {
+
+                Intent ic_top = new Intent(MainActivity.this, BuscarActivity.class);
+                startActivity(ic_top);
+            }
+        });
+
+        ic_buscar =(ImageButton)findViewById(R.id.ic_buscar);
+
+        ic_buscar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View V) {
+
+                Intent ic_buscar = new Intent(MainActivity.this, BuscarActivity.class);
+                startActivity(ic_buscar);
+            }
+        });
+
+        ic_comparar =(ImageButton)findViewById(R.id.ic_comparar);
+
+        ic_comparar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View V) {
+
+                Intent ic_comparar = new Intent(MainActivity.this, BuscarActivity.class);
+                startActivity(ic_comparar);
+            }
+        });
+
+        ic_noticias =(ImageButton)findViewById(R.id.ic_noticias);
+
+        ic_noticias.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View V) {
+
+                Intent ic_noticias = new Intent(MainActivity.this, BuscarActivity.class);
+                startActivity(ic_noticias);
+            }
+        });
+                        
+                        
+                        
+                
+                
+        
+        */
+        //---------------------------------------------------------BARRA-END----------------------------------------------
+
+
+
+
+
+
+
+
+        Best =(ImageButton)findViewById(R.id.todo);
+
+        Best.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View V) {
+
+                Intent IntentBest = new Intent(MainActivity.this, ListaMejorActivity.class);
+                startActivity(IntentBest);
+
+            }
+
+
+        });
+        
+        
+        
+        
 
         Buscar =(ImageButton)findViewById(R.id.buscar);
 
@@ -46,7 +143,7 @@ public class MainActivity extends AppCompatActivity
 
 
         });
-        MisDispositivos =(ImageButton)findViewById(R.id.misDispositivos);
+         /* MisDispositivos =(ImageButton)findViewById(R.id.misDispositivos);
 
         MisDispositivos.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,7 +155,7 @@ public class MainActivity extends AppCompatActivity
             }
 
 
-        });
+        }); */
 
         ExplorarMarcas =(ImageButton)findViewById(R.id.marcas);
 
@@ -162,27 +259,58 @@ public class MainActivity extends AppCompatActivity
 
 
 
-        } else if (id == R.id.nav_devi) {
+        } else if (id == R.id.nav_home1) {
 
-            Intent devi = new Intent(MainActivity.this, MisDispositivos.class);
+
+
+        }else if (id == R.id.nav_top) {
+
+            Intent devi = new Intent(MainActivity.this, ListaMejorActivity.class);
             startActivity(devi);
 
-        } else if (id == R.id.nav_news) {
+        }
 
-            Intent news = new Intent(MainActivity.this, NoticiasActivity.class);
-            startActivity(news);
+        else if (id == R.id.nav_top1) {
 
-        } else if (id == R.id.nav_set) {
-
-            Intent set = new Intent(MainActivity.this, SplashActivity.class);
+            Intent set = new Intent(MainActivity.this, ListaMejorActivity.class);
             startActivity(set);
 
-        }  else if (id == R.id.nav_search) {
+        }  else if (id == R.id.nav_buscar) {
 
-            Intent search = new Intent(MainActivity.this, LoginActivity.class);
+            Intent search = new Intent(MainActivity.this, BuscarActivity.class);
             startActivity(search);
 
         }
+        else if (id == R.id.nav_buscar1) {
+
+            Intent search = new Intent(MainActivity.this, BuscarActivity.class);
+            startActivity(search);
+        }
+        else if (id == R.id.nav_comparar) {
+
+            Intent search = new Intent(MainActivity.this, SplashActivity.class);
+            startActivity(search);
+
+        }
+        else if (id == R.id.nav_comparar1) {
+
+            Intent search = new Intent(MainActivity.this, SplashActivity.class);
+            startActivity(search);
+
+        }
+        else if (id == R.id.nav_noticias) {
+
+            Intent search = new Intent(MainActivity.this, NoticiasActivity.class);
+            startActivity(search);
+
+        }
+        else if (id == R.id.nav_noticias1) {
+
+            Intent search = new Intent(MainActivity.this, NoticiasActivity.class);
+            startActivity(search);
+
+        }
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

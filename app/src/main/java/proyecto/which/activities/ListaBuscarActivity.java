@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import java.util.HashMap;
 import java.util.List;
 
 import proyecto.which.R;
@@ -31,21 +32,15 @@ public class ListaBuscarActivity extends AppCompatActivity implements Smartphone
         setContentView(R.layout.activity_lista_buscar);
 
         back =(ImageButton)findViewById(R.id.back);
-
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View V) {
-
                 Intent Intentback = new Intent(ListaBuscarActivity.this, BuscarActivity.class);
                 startActivity(Intentback);
-
             }
 
 
         });
-
-
-
 
 
         recyclerView = (RecyclerView) findViewById(R.id.smartphone_list_buscar);
@@ -53,20 +48,13 @@ public class ListaBuscarActivity extends AppCompatActivity implements Smartphone
     }
 
 
-
-//    @Override
-//    protected void onPostResume() {
-//        super.onPostResume();
-//        AtletaManager.getInstance().getAllAtletas(AtletaListActivity.this);
-//    }
-
     @Override
     protected void onResume() {
-        // Sirve para recoger los extra que recibimos de BuscarsActivity.java a la hora de hacer clic
-        // en un boton o en otro dependiendo de la buscar donde se ha hecho click.
-        Bundle bundle = getIntent().getExtras();
+        Intent intent = getIntent();
         super.onResume();
-        SmartphoneManager.getInstance().getSmartphoneByBuscar(ListaBuscarActivity.this, bundle.getString("buscar"));
+        HashMap<String, String> datos = (HashMap<String, String>) intent.getSerializableExtra("mapSmartphones");
+
+        SmartphoneManager.getInstance().getSmartphoneByFiltros(ListaBuscarActivity.this, datos);
     }
 
     private void setupRecyclerView(@NonNull RecyclerView recyclerView) {
@@ -81,14 +69,10 @@ public class ListaBuscarActivity extends AppCompatActivity implements Smartphone
     }
 
     @Override
-    public void onSucces() {
-
-    }
+    public void onSucces() {}
 
     @Override
-    public void onSuccess(Smartphone smartphone) {
-
-    }
+    public void onSuccess(Smartphone smartphone) {}
 
     @Override
     public void onFailure(Throwable t) {
@@ -119,7 +103,7 @@ public class ListaBuscarActivity extends AppCompatActivity implements Smartphone
             // cogemos la posicion del array que recibimos
             holder.itemSmarthpone = valoresListaSmartphone.get(position);
             // Buscar y modelo del smartphone
-            holder.nombrePerfilSmartphone.setText(valoresListaSmartphone.get(position).getBuscar().toString()
+            holder.nombrePerfilSmartphone.setText(valoresListaSmartphone.get(position).getMarca().toString()
             + " " + valoresListaSmartphone.get(position).getModelo().toString());
             // bateria del smartphone
             holder.bateriaPerfilSmartphone.setText(""+valoresListaSmartphone.get(position).getBateria());
@@ -151,7 +135,7 @@ public class ListaBuscarActivity extends AppCompatActivity implements Smartphone
                 super(view);
                 mView = view;
                 nombrePerfilSmartphone = (TextView) view.findViewById(R.id.Nombre_perfil_buscar);
-                bateriaPerfilSmartphone = (TextView) view.findViewById(R.id.bateria_buscar);
+                bateriaPerfilSmartphone = (TextView) view.findViewById(R.id.bateria_perfil_buscar);
             }
 
             @Override

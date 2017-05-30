@@ -5,6 +5,7 @@ import android.util.Log;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import java.util.HashMap;
 import java.util.List;
 
 import proyecto.which.model.Smartphone;
@@ -153,6 +154,31 @@ public class SmartphoneManager {
         }
     public void onFailure(Call<List<Smartphone>> call, Throwable t) {
                 Log.e("SmartphoneManager->", "getSmartphoneBySo: " + t);
+                smartphoneCallback.onFailure(t);
+            }
+        });
+    }
+
+    /* GET SMARTPHONES BY FILTROS */
+
+    public synchronized void getSmartphoneByFiltros(final SmartphoneCallback smartphoneCallback, HashMap filtros) {
+        Call<List<Smartphone>> call = smartphoneService.getSmartphoneByFiltros(UserLoginManager.getInstance().getBearerToken(), filtros);
+        call.enqueue(new Callback<List<Smartphone>>() {
+            @Override
+            public void onResponse(Call<List<Smartphone>> call, Response<List<Smartphone>> response) {
+
+                smartphones = response.body();
+
+                int code = response.code();
+
+                if (code == 200 || code == 201) {
+                    smartphoneCallback.onSuccess(smartphones);
+                } else {
+                    smartphoneCallback.onFailure(new Throwable("ERROR" + code + ", " + response.raw().message()));
+                }
+            }
+            public void onFailure(Call<List<Smartphone>> call, Throwable t) {
+                Log.e("SmartphoneManager->", "getSmartphoneByFiltros: " + t);
                 smartphoneCallback.onFailure(t);
             }
         });

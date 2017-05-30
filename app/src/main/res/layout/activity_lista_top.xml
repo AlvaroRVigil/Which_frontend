@@ -1,59 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    tools:context=".activities.TokenActivity">
-
-    <android.support.design.widget.AppBarLayout
-        android:id="@+id/app_bar"
+    <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
+        android:layout_marginTop="50dp"
+        android:background="@color/transparent"
+        android:elevation="0dp"
+        android:scrollbarSize="3dp">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@color/blue1"
+            android:orientation="horizontal"
+            android:scrollbarSize="1dp">
 
-            <TextView
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/smartphone_list_top"
                 android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                android:layout_weight="1"
-                android:background="@color/Which"
-                android:gravity="center_vertical|center_horizontal"
-                android:text="Todos los modelos"
-                android:textColor="@color/colorPrimary"
-                android:textSize="20sp" />
-
-            <ImageButton
-                android:id="@+id/back"
-                android:layout_width="?attr/actionBarSize"
-                android:layout_height="?attr/actionBarSize"
-                android:background="@color/transparent"
-                app:srcCompat="@mipmap/arrow" />
-
-            <android.support.v7.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="20dp"
-                android:layout_height="?attr/actionBarSize"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginLeft="70dp"
-                android:background="@color/transparent"
-                app:popupTheme="@style/AppTheme.PopupOverlay" />
-        </RelativeLayout>
-
-    </android.support.design.widget.AppBarLayout>
-
-    <FrameLayout
-        android:id="@+id/frameLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
-        <include layout="@layout/content_lista_marca" />
-    </FrameLayout>
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@color/blue1"
+                android:backgroundTint="@color/blue1"
+                android:orientation="horizontal"
+                app:layoutManager="LinearLayoutManager"
+                tools:context=".activities.MainActivity"
+                tools:listitem="@layout/content_perfil_top" />
+        </LinearLayout>
+    </HorizontalScrollView>
 
 
-</android.support.design.widget.CoordinatorLayout>

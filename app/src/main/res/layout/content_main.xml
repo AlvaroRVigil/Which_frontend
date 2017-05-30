@@ -99,6 +99,14 @@
                         android:textColor="@color/colorPrimary"
                         android:textSize="18sp" />
 
+
+                    <include
+                    layout="@layout/activity_lista_top" />
+
+
+
+
+<!--
                     <HorizontalScrollView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -642,7 +650,7 @@
                         </LinearLayout>
 
 
-                    </HorizontalScrollView>
+                    </HorizontalScrollView> -->
 
                 </FrameLayout>
 

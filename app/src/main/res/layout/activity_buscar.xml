@@ -20,7 +20,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 android:layout_weight="1"
-                android:background="@color/Which"
+                android:background="@color/blue1"
                 android:gravity="center_vertical|center_horizontal"
                 android:text="Buscar"
                 android:textColor="@color/colorPrimary"
@@ -54,7 +54,7 @@
         android:layout_margin="@dimen/fab_margin"
         android:soundEffectsEnabled="false"
         android:tintMode="multiply"
-        app:backgroundTint="@color/flat_naranja"
+        app:backgroundTint="@color/blue1"
         app:srcCompat="@mipmap/search" />
 
     <ScrollView

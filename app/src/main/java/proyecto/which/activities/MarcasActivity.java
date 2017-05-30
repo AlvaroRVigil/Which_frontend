@@ -176,27 +176,58 @@ public class MarcasActivity extends AppCompatActivity
 
         if (id == R.id.nav_home) {
 
-            Intent home = new Intent(MarcasActivity.this, MainActivity.class);
-            startActivity(home);
-
-        } else if (id == R.id.nav_devi) {
-
-            Intent devi = new Intent(MarcasActivity.this, MisDispositivos.class);
+            Intent devi = new Intent(MarcasActivity.this, MainActivity.class);
             startActivity(devi);
 
-        } else if (id == R.id.nav_news) {
+        } else if (id == R.id.nav_home1) {
 
-            Intent news = new Intent(MarcasActivity.this, SplashActivity.class);
-            startActivity(news);
+            Intent devi = new Intent(MarcasActivity.this, MainActivity.class);
+            startActivity(devi);
 
-        } else if (id == R.id.nav_set) {
+        }else if (id == R.id.nav_top) {
 
-            Intent set = new Intent(MarcasActivity.this, SplashActivity.class);
+            Intent devi = new Intent(MarcasActivity.this, ListaMejorActivity.class);
+            startActivity(devi);
+
+        }
+
+        else if (id == R.id.nav_top1) {
+
+            Intent set = new Intent(MarcasActivity.this, ListaMejorActivity.class);
             startActivity(set);
 
-        }  else if (id == R.id.nav_search) {
+        }  else if (id == R.id.nav_buscar) {
+
+            Intent search = new Intent(MarcasActivity.this, BuscarActivity.class);
+            startActivity(search);
+
+        }
+        else if (id == R.id.nav_buscar1) {
+
+            Intent search = new Intent(MarcasActivity.this, BuscarActivity.class);
+            startActivity(search);
+        }
+        else if (id == R.id.nav_comparar) {
 
             Intent search = new Intent(MarcasActivity.this, SplashActivity.class);
+            startActivity(search);
+
+        }
+        else if (id == R.id.nav_comparar1) {
+
+            Intent search = new Intent(MarcasActivity.this, SplashActivity.class);
+            startActivity(search);
+
+        }
+        else if (id == R.id.nav_noticias) {
+
+            Intent search = new Intent(MarcasActivity.this, NoticiasActivity.class);
+            startActivity(search);
+
+        }
+        else if (id == R.id.nav_noticias1) {
+
+            Intent search = new Intent(MarcasActivity.this, NoticiasActivity.class);
             startActivity(search);
 
         }

@@ -157,7 +157,7 @@ public class ListaSistemaActivity extends AppCompatActivity implements Smartphon
                 super(view);
                 mView = view;
                 nombrePerfilSmartphone = (TextView) view.findViewById(R.id.Nombre_perfil_sistema);
-                bateriaPerfilSmartphone = (TextView) view.findViewById(R.id.bateria_sistema);
+                bateriaPerfilSmartphone = (TextView) view.findViewById(R.id.bateria_perfil_sistema);
             }
 
             @Override

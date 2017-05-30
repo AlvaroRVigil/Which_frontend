@@ -47,13 +47,16 @@
     </android.support.design.widget.AppBarLayout>
 
 
-    <!-- <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabBuscar"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
-        android:src="@android:drawable/ic_dialog_email" /> -->
+        android:soundEffectsEnabled="false"
+        android:tintMode="multiply"
+        app:backgroundTint="@color/extra"
+        app:srcCompat="@mipmap/search" />
 
 
 
@@ -105,65 +108,67 @@
 
                         <TableRow
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent">
+                            android:layout_height="match_parent" >
 
                             <ImageButton
                                 android:id="@+id/Android"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_width="250dp"
+                                android:layout_height="250dp"
                                 android:layout_alignParentEnd="true"
                                 android:layout_below="@+id/explorar"
                                 android:layout_weight="1"
-                                android:backgroundTint="@android:color/background_light"
+                                android:backgroundTint="@color/android"
                                 android:elevation="4dp"
-                                app:srcCompat="@mipmap/android" />
+                                app:srcCompat="@mipmap/androide" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" >
 
                             <ImageButton
                                 android:id="@+id/iOS"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_width="250dp"
+                                android:layout_height="250dp"
                                 android:layout_alignParentEnd="true"
                                 android:layout_below="@+id/explorar"
                                 android:layout_weight="1"
                                 android:backgroundTint="@android:color/background_light"
                                 android:elevation="4dp"
                                 app:srcCompat="@mipmap/ios" />
-
-
                         </TableRow>
 
                         <TableRow
                             android:layout_width="match_parent"
                             android:layout_height="match_parent">
+
 
                             <ImageButton
                                 android:id="@+id/Blackberryos"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_width="250dp"
+                                android:layout_height="250dp"
                                 android:layout_alignParentEnd="true"
                                 android:layout_below="@+id/explorar"
                                 android:layout_weight="1"
-                                android:backgroundTint="@android:color/background_light"
+                                android:backgroundTint="@color/colorPrimaryDark"
                                 android:elevation="4dp"
-                                app:srcCompat="@mipmap/blackberryos" />
-
-                            <ImageButton
-                                android:id="@+id/Windows"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_alignParentEnd="true"
-                                android:layout_below="@+id/explorar"
-                                android:layout_weight="1"
-                                android:backgroundTint="@android:color/background_light"
-                                android:elevation="4dp"
-                                app:srcCompat="@mipmap/windows" />
-
-
+                                app:srcCompat="@mipmap/blackberry" />
                         </TableRow>
 
                         <TableRow
                             android:layout_width="match_parent"
                             android:layout_height="match_parent">
+
+                            <ImageButton
+                                android:id="@+id/Windows"
+                                android:layout_width="250dp"
+                                android:layout_height="250dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_below="@+id/explorar"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/flat_azul"
+                                android:elevation="4dp"
+                                app:srcCompat="@mipmap/windows" />
 
 
                         </TableRow>

@@ -19,6 +19,7 @@
             android:theme="@style/AppTheme.NoActionBarWhich">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -52,9 +53,7 @@
             android:theme="@style/AppTheme.NoActionBarGrey" />
         <activity
             android:name=".activities.LoginActivity"
-            android:label="@string/title_activity_login">
-
-        </activity>
+            android:label="@string/title_activity_login" />
         <activity
             android:name=".activities.TokenActivity"
             android:label="@string/title_activity_token"
@@ -75,10 +74,14 @@
             android:name=".activities.ListaMejorActivity"
             android:label="ListaMejor"
             android:theme="@style/AppTheme.NoActionBarYellow" />
-        <activity android:name=".activities.NoticiasActivity"
+        <activity
+            android:name=".activities.NoticiasActivity"
             android:label="Noticias"
             android:theme="@style/AppTheme.NoActionBarRed" />
-
+        <activity
+            android:name=".activities.FichaActivity"
+            android:label="@string/title_activity_ficha"
+            android:theme="@style/AppTheme.NoActionBarBlue" />
     </application>
 
 </manifest>

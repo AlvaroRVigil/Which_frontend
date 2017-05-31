@@ -1,0 +1,1024 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="layout.ficha">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_weight="1"
+                android:background="@color/blue1"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="Ficha Técnica"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp" />
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="20dp"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="70dp"
+                android:background="@color/transparent"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        </RelativeLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+     /////////////////////////////////////////////////APP_BAR END///////////////////////////////////////////////////////////
+     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/background_light"
+        android:backgroundTint="@android:color/background_light"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout"
+                android:layout_width="100dp"
+                android:layout_height="115dp">
+
+                <ImageView
+                    android:id="@+id/Imagen_ficha"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@mipmap/movil0" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/top1"
+                android:layout_width="match_parent"
+                android:layout_height="115dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/relativeLayout">
+
+                <TextView
+                    android:id="@+id/Nombre_ficha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:text="Samsung Galaxy S7 Edge"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/lanzamiento"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/Nombre_ficha"
+                    android:ems="10"
+                    android:paddingTop="5px"
+                    android:text="Fecha de lanzamiento: "
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/Dia_ficha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/lanzamiento"
+                    android:text="24"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lanzamiento"
+                    android:layout_toEndOf="@+id/Dia_ficha"
+                    android:paddingLeft="1sp"
+                    android:paddingRight="1sp"
+                    android:text="-"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/Mes_ficha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lanzamiento"
+                    android:layout_toEndOf="@+id/textView10"
+                    android:text="03"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lanzamiento"
+                    android:layout_toEndOf="@+id/Mes_ficha"
+                    android:paddingLeft="1sp"
+                    android:paddingRight="1sp"
+                    android:text="-"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/Anyo_ficha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lanzamiento"
+                    android:layout_toEndOf="@+id/textView12"
+                    android:text="2017"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="12sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/Dia_ficha">
+
+                    <TextView
+                        android:id="@+id/sm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentStart="false"
+                        android:layout_centerHorizontal="false"
+                        android:layout_centerVertical="false"
+                        android:gravity="center_vertical"
+                        android:text="Smart"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="15sp" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toEndOf="@+id/sm">
+
+                        <ImageView
+                            android:id="@+id/imageView4"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            app:srcCompat="@mipmap/smartbubble" />
+
+                        <TextView
+                            android:id="@+id/smart_ficha"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:text="20"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="15sp" />
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/desc"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@+id/relativeLayout4">
+
+            <TextView
+                android:id="@+id/descripcion_ficha"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:padding="16dp"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. " />
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/desc">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/infocamara"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Camara"
+                    android:gravity="center"
+                    android:visibility="visible">
+
+
+                    <ImageView
+                        android:id="@+id/imageView5"
+                        android:layout_width="1dp"
+                        android:layout_height="120dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        app:srcCompat="@color/blue3" />
+
+                    <RelativeLayout
+                        android:id="@+id/relativeLayout5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentStart="false"
+                        android:layout_alignParentTop="false"
+                        android:padding="15dp">
+
+                        <TextView
+                            android:id="@+id/textView313"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:text="Cámara Trasera" />
+
+                        <RelativeLayout
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="30dp">
+
+                            <ImageView
+                                android:id="@+id/imageVi20"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_alignParentStart="false"
+                                android:layout_alignParentTop="false"
+                                android:layout_centerInParent="true"
+                                android:background="@mipmap/camara" />
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true">
+
+                                <TextView
+                                    android:id="@+id/camaratrasera_ficha"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="12" />
+
+                                <TextView
+                                    android:id="@+id/mpx"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_toEndOf="@+id/camaratrasera_ficha"
+                                    android:text="Mpx" />
+                            </RelativeLayout>
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="false"
+                        android:padding="15dp">
+
+                        <TextView
+                            android:id="@+id/textView313"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:text="Cámara Frontal" />
+
+                        <RelativeLayout
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="30dp">
+
+                            <ImageView
+                                android:id="@+id/imageVi20"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_alignParentStart="false"
+                                android:layout_alignParentTop="false"
+                                android:layout_centerInParent="true"
+                                android:background="@mipmap/camara" />
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true">
+
+                                <TextView
+                                    android:id="@+id/camaratrasera_ficha"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="5" />
+
+                                <TextView
+                                    android:id="@+id/mpx"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_toEndOf="@+id/camaratrasera_ficha"
+                                    android:text="Mpx" />
+                            </RelativeLayout>
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/Camara"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/blue1"
+                    android:elevation="4dp"
+                    android:foregroundGravity="center_vertical">
+
+                    <ImageButton
+                        android:id="@+id/mascamara"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="12dp"
+                        android:background="@color/transparent"
+                        android:clickable="true"
+                        android:src="@mipmap/mas"
+                        android:visibility="invisible" />
+
+                    <ImageButton
+                        android:id="@+id/menoscamara"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="12dp"
+                        android:background="@color/transparent"
+                        android:clickable="true"
+                        android:src="@mipmap/menos"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="20dp"
+                        android:text="Cámara"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/infomemoria"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/memoria"
+                    android:visibility="gone">
+
+
+                    <ImageView
+                        android:layout_width="1dp"
+                        android:layout_height="120dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        app:srcCompat="@color/blue3" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentStart="false"
+                        android:layout_alignParentTop="false"
+                        android:padding="15dp">
+
+                        <TextView
+                            android:id="@+id/textView3133456543"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:text="RAM" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="30dp">
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="false">
+
+                                <TextView
+                                    android:id="@+id/ancho_ficha"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_alignParentTop="true"
+                                    android:text="4"
+                                    android:textSize="40sp" />
+
+                                <TextView
+                                    android:id="@+id/textView4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="50dp"
+                                    android:layout_alignParentTop="false"
+                                    android:layout_toEndOf="@+id/ancho_ficha"
+                                    android:gravity="bottom"
+                                    android:paddingLeft="5dp"
+                                    android:text="GB"
+                                    android:textSize="20sp" />
+                            </RelativeLayout>
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="false"
+                        android:padding="15dp">
+
+                        <TextView
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:text="Memoria Interna" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="30dp">
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="false">
+
+                                <TextView
+                                    android:id="@+id/rom_ficha"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_alignParentTop="true"
+                                    android:text="64"
+                                    android:textSize="40sp" />
+
+                                <TextView
+                                    android:id="@+id/textView4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="50dp"
+                                    android:layout_alignParentTop="false"
+                                    android:layout_toEndOf="@+id/rom_ficha"
+                                    android:gravity="bottom"
+                                    android:paddingLeft="5dp"
+                                    android:text="GB"
+                                    android:textSize="20sp" />
+                            </RelativeLayout>
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/memoria"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/infocamara"
+                    android:background="@color/blue1"
+                    android:elevation="4dp"
+                    android:foregroundGravity="center_vertical">
+
+                    <ImageButton
+                        android:id="@+id/masmemoria"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="12dp"
+                        android:background="@color/transparent"
+                        android:clickable="true"
+                        android:src="@mipmap/mas" />
+
+                    <ImageButton
+                        android:id="@+id/menosmemoria"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="12dp"
+                        android:background="@color/transparent"
+                        android:clickable="true"
+                        android:src="@mipmap/menos"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="20dp"
+                        android:text="Almacenamiento y memoria"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/infopantalla"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/pantalla"
+                    android:gravity="center"
+                    android:visibility="gone">
+
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="false"
+                        android:padding="15dp">
+
+                        <TextView
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:text="Tamaño" />
+
+                        <RelativeLayout
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="30dp">
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_alignParentStart="false"
+                                android:layout_alignParentTop="false"
+                                android:layout_centerInParent="true"
+                                android:background="@mipmap/pantalla" />
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true">
+
+                                <TextView
+                                    android:id="@+id/pantallapulgadas_ficha"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="5.1" />
+
+                                <TextView
+                                    android:id="@+id/textView4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_toEndOf="@+id/pantallapulgadas_ficha"
+                                    android:text='"' />
+                            </RelativeLayout>
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/pantalla"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/infomemoria"
+                    android:background="@color/blue1"
+                    android:elevation="4dp"
+                    android:foregroundGravity="center_vertical">
+
+                    <ImageButton
+                        android:id="@+id/maspantalla"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="12dp"
+                        android:background="@color/transparent"
+                        android:clickable="true"
+                        android:src="@mipmap/mas" />
+
+                    <ImageButton
+                        android:id="@+id/menospantalla"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="12dp"
+                        android:background="@color/transparent"
+                        android:clickable="true"
+                        android:src="@mipmap/menos"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="20dp"
+                        android:text="Pantalla"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/infootros"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/otros"
+                    android:visibility="gone">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="false"
+                                android:padding="15dp">
+
+                                <TextView
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center_horizontal"
+                                    android:text="Memoria Interna" />
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="30dp">
+
+                                    <RelativeLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="false">
+
+                                        <TextView
+                                            android:id="@+id/rom_ficha"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_alignParentStart="true"
+                                            android:layout_alignParentTop="true"
+                                            android:text="64"
+                                            android:textSize="40sp" />
+
+                                        <TextView
+                                            android:id="@+id/textView4"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="50dp"
+                                            android:layout_alignParentTop="false"
+                                            android:layout_toEndOf="@+id/rom_ficha"
+                                            android:gravity="bottom"
+                                            android:paddingLeft="5dp"
+                                            android:text="GB"
+                                            android:textSize="20sp" />
+                                    </RelativeLayout>
+                                </RelativeLayout>
+
+                            </RelativeLayout>
+
+                            <ImageView
+                                android:id="@+id/imageView11"
+                                android:layout_width="1dp"
+                                android:layout_height="120dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                app:srcCompat="@color/blue3" />
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentStart="false"
+                                android:layout_alignParentTop="false"
+                                android:padding="15dp">
+
+                                <TextView
+                                    android:id="@+id/textView3133456543"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center_horizontal"
+                                    android:text="RAM" />
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="30dp">
+
+                                    <RelativeLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="false">
+
+                                        <TextView
+                                            android:id="@+id/ancho_ficha"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_alignParentStart="true"
+                                            android:layout_alignParentTop="true"
+                                            android:text="4"
+                                            android:textSize="40sp" />
+
+                                        <TextView
+                                            android:id="@+id/textView4"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="50dp"
+                                            android:layout_alignParentTop="false"
+                                            android:layout_toEndOf="@+id/ancho_ficha"
+                                            android:gravity="bottom"
+                                            android:paddingLeft="5dp"
+                                            android:text="GB"
+                                            android:textSize="20sp" />
+                                    </RelativeLayout>
+                                </RelativeLayout>
+
+                            </RelativeLayout>
+                        </TableRow>
+
+                        <ImageView
+                            android:id="@+id/imageView12"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            app:srcCompat="@color/blue3" />
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="false"
+                                android:padding="15dp">
+
+                                <TextView
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center_horizontal"
+                                    android:text="Memoria Interna" />
+
+                                <RelativeLayout
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="30dp"
+                                    android:gravity="center">
+
+                                    <ImageView
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:layout_alignParentStart="false"
+                                        android:layout_alignParentTop="false"
+                                        android:layout_centerInParent="true"
+                                        android:background="@mipmap/pantallamedidas" />
+
+                                    <RelativeLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="false">
+
+                                        <TextView
+                                            android:id="@+id/ancho_ficha"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_centerHorizontal="false"
+                                            android:layout_centerVertical="false"
+                                            android:gravity="center"
+                                            android:text="12" />
+
+                                        <TextView
+                                            android:id="@+id/x"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_alignParentTop="true"
+                                            android:layout_marginLeft="2dp"
+                                            android:layout_marginRight="2dp"
+                                            android:layout_toEndOf="@+id/ancho_ficha"
+                                            android:gravity="center"
+                                            android:text="X" />
+
+                                        <TextView
+                                            android:id="@+id/alto_ficha"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_alignParentStart="false"
+                                            android:layout_alignParentTop="false"
+                                            android:layout_toEndOf="@+id/x"
+                                            android:gravity="center"
+                                            android:text="12" />
+                                    </RelativeLayout>
+                                </RelativeLayout>
+
+                            </RelativeLayout>
+
+                            <ImageView
+                                android:id="@+id/imageView9"
+                                android:layout_width="1dp"
+                                android:layout_height="120dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                app:srcCompat="@color/blue3" />
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentStart="false"
+                                android:layout_alignParentTop="false"
+                                android:gravity="center"
+                                android:padding="15dp">
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_below="@+id/textView3133456543"
+                                    android:layout_centerHorizontal="true"
+                                    android:background="@android:color/background_light"
+                                    android:padding="16dp"
+                                    android:paddingTop="@dimen/activity_vertical_margin">
+
+                                    <RelativeLayout
+                                        android:id="@+id/relativeLayout3"
+                                        android:layout_width="60dp"
+                                        android:layout_height="80dp"
+                                        android:layout_alignParentStart="true"
+                                        android:layout_below="@+id/textView33"
+                                        android:layout_marginTop="5dp">
+
+                                        <ProgressBar
+                                            android:id="@+id/bar_bateria_sistema"
+                                            style="?android:attr/progressBarStyleHorizontal"
+                                            android:layout_width="60dp"
+                                            android:layout_height="50dp"
+                                            android:layout_alignParentStart="false"
+                                            android:layout_alignParentTop="false"
+                                            android:layout_centerInParent="true"
+                                            android:indeterminate="false"
+                                            android:max="4000"
+                                            android:progress="3000"
+                                            android:progressBackgroundTint="@color/colorPrimaryDark"
+                                            android:progressTint="@color/extra"
+                                            android:scaleY="10" />
+
+                                        <ImageView
+                                            android:id="@+id/imageVi0"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="50dp"
+                                            android:layout_alignParentStart="false"
+                                            android:layout_alignParentTop="false"
+                                            android:layout_centerInParent="true"
+                                            android:background="@mipmap/ic_bateria" />
+
+                                        <RelativeLayout
+                                            android:id="@+id/relativeLayout2"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerInParent="true"
+                                            android:paddingRight="7dp">
+
+                                            <TextView
+                                                android:id="@+id/bateria_ficha"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:paddingRight="5dp"
+                                                android:text="3000" />
+
+                                        </RelativeLayout>
+                                    </RelativeLayout>
+
+                                </RelativeLayout>
+
+                                <TextView
+                                    android:id="@+id/textView3133456543"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center_horizontal"
+                                    android:text="Batería" />
+
+                            </RelativeLayout>
+
+                        </TableRow>
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/otros"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/infopantalla"
+                    android:background="@color/blue1"
+                    android:elevation="4dp"
+                    android:foregroundGravity="center_vertical">
+
+                    <ImageButton
+                        android:id="@+id/masotros"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="12dp"
+                        android:background="@color/transparent"
+                        android:clickable="true"
+                        android:src="@mipmap/mas" />
+
+                    <ImageButton
+                        android:id="@+id/menosotros"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="12dp"
+                        android:background="@color/transparent"
+                        android:clickable="true"
+                        android:src="@mipmap/menos"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="20dp"
+                        android:text="Otras características"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

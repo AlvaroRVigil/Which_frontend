@@ -143,4 +143,7 @@ Android gives you a world-class platform for creating apps and games for Android
     <string name="title_activity_ficha">FichaActivity</string>
     <string name="title_activity_main2">Main2Activity</string>
 
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>

@@ -552,7 +552,7 @@
                         app:srcCompat="@mipmap/smartbubble" />
 
                     <TextView
-                        android:id="@+id/smart_buscar"
+                        android:id="@+id/smart_perfil_buscar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerInParent="true"

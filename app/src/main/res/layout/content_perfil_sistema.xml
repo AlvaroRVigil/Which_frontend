@@ -222,7 +222,9 @@
         android:layout_width="match_parent"
         android:layout_height="220dp"
         android:background="@android:color/background_light"
-        android:padding="10dp">
+        android:padding="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
 
         <RelativeLayout
             android:id="@+id/relativeLayout"
@@ -294,7 +296,7 @@
                             android:layout_centerInParent="true">
 
                             <TextView
-                                android:id="@+id/camara_perfil_sistema"
+                                android:id="@+id/camaratrasera_perfil_sistema"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="12" />
@@ -304,7 +306,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentTop="true"
-                                android:layout_toEndOf="@+id/camara_perfil_sistema"
+                                android:layout_toEndOf="@+id/camaratrasera_perfil_sistema"
                                 android:text="Mpx" />
                         </RelativeLayout>
                     </RelativeLayout>
@@ -552,7 +554,7 @@
                         app:srcCompat="@mipmap/smartbubble" />
 
                     <TextView
-                        android:id="@+id/smart_sistema"
+                        android:id="@+id/smart_perfil_sistema"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerInParent="true"

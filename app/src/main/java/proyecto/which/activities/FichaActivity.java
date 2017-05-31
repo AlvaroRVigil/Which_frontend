@@ -14,8 +14,8 @@ import proyecto.which.R;
 
 public class FichaActivity extends AppCompatActivity {
 
-    RelativeLayout infocamara, infomemoria;
-    ImageButton mascamara, menoscamara, masmemoria, menosmemoria;
+    RelativeLayout infocamara, infomemoria, infopantalla, infootros;
+    ImageButton mascamara, menoscamara, masmemoria, menosmemoria, maspantalla, menospantalla, masotros, menosotros;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,14 +24,7 @@ public class FichaActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+
         infocamara = (RelativeLayout) findViewById(R.id.infocamara);
         mascamara = (ImageButton) findViewById(R.id.mascamara);
         mascamara.setOnClickListener(new OnClickListener() {
@@ -82,6 +75,60 @@ public class FichaActivity extends AppCompatActivity {
                 menosmemoria.setVisibility(View.INVISIBLE);
                 masmemoria.setVisibility(View.VISIBLE);
                 infomemoria.setVisibility(View.GONE);
+
+            }
+        });
+
+        infopantalla = (RelativeLayout) findViewById(R.id.infopantalla);
+        maspantalla = (ImageButton) findViewById(R.id.maspantalla);
+        maspantalla.setOnClickListener(new OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                System.out.println("maspantalla button");
+                maspantalla.setVisibility(View.INVISIBLE);
+                menospantalla.setVisibility(View.VISIBLE);
+                infopantalla.setVisibility(View.VISIBLE);
+                //  infopantalla.setMaxLines(Integer.MAX_VALUE);
+
+            }
+        });
+        menospantalla = (ImageButton) findViewById(R.id.menospantalla);
+        menospantalla.setOnClickListener(new OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                System.out.println("menospantalla button");
+                menospantalla.setVisibility(View.INVISIBLE);
+                maspantalla.setVisibility(View.VISIBLE);
+                infopantalla.setVisibility(View.GONE);
+
+            }
+        });
+
+        infootros = (RelativeLayout) findViewById(R.id.infootros);
+        masotros = (ImageButton) findViewById(R.id.masotros);
+        masotros.setOnClickListener(new OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                System.out.println("masotros button");
+                masotros.setVisibility(View.INVISIBLE);
+                menosotros.setVisibility(View.VISIBLE);
+                infootros.setVisibility(View.VISIBLE);
+                //  infootros.setMaxLines(Integer.MAX_VALUE);
+
+            }
+        });
+        menosotros = (ImageButton) findViewById(R.id.menosotros);
+        menosotros.setOnClickListener(new OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                System.out.println("menosotros button");
+                menosotros.setVisibility(View.INVISIBLE);
+                masotros.setVisibility(View.VISIBLE);
+                infootros.setVisibility(View.GONE);
 
             }
         });

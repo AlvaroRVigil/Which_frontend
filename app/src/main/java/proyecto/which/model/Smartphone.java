@@ -18,6 +18,7 @@ public class Smartphone {
     private EnumOS so;
     private Integer rom;
     private Integer proteccionPolvo;
+    private Integer proteccionLiquido;
     private Integer puntuacion;
     private String descripcion;
     private Date fechaLancamiento;
@@ -25,7 +26,7 @@ public class Smartphone {
     public Smartphone() {
     }
 
-    public Smartphone(Long id, EnumMarca marca, String modelo, Integer camara, Integer frontCamara, Integer bateria, Double pulgadasPantalla, Integer resolucionPantallaAlto, Integer resolucionPantallaAncho, Double ram, EnumOS so, Integer rom, Integer proteccionPolvo, Integer puntuacion, String descripcion, Date fechaLancamiento) {
+    public Smartphone(Long id, EnumMarca marca, String modelo, Integer camara, Integer frontCamara, Integer bateria, Double pulgadasPantalla, Integer resolucionPantallaAlto, Integer resolucionPantallaAncho, Double ram, EnumOS so, Integer rom, Integer proteccionPolvo, Integer proteccionLiquido, Integer puntuacion, String descripcion, Date fechaLancamiento) {
         this.id = id;
         this.marca = marca;
         this.modelo = modelo;
@@ -39,6 +40,7 @@ public class Smartphone {
         this.so = so;
         this.rom = rom;
         this.proteccionPolvo = proteccionPolvo;
+        this.proteccionLiquido = proteccionLiquido;
         this.puntuacion = puntuacion;
         this.descripcion = descripcion;
         this.fechaLancamiento = fechaLancamiento;
@@ -146,6 +148,14 @@ public class Smartphone {
 
     public void setProteccionPolvo(Integer proteccionPolvo) {
         this.proteccionPolvo = proteccionPolvo;
+    }
+
+    public Integer getProteccionLiquido() {
+        return proteccionLiquido;
+    }
+
+    public void setProteccionLiquido(Integer proteccionLiquido) {
+        this.proteccionLiquido = proteccionLiquido;
     }
     public Integer getPuntuacion() {
         return puntuacion;

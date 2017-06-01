@@ -5,6 +5,7 @@ import android.util.Log;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -183,4 +184,54 @@ public class SmartphoneManager {
             }
         });
     }
+
+    /* GET SMARTPHONES ORDER BY PUNTUACION */
+
+    public synchronized void getSmartphoneByTop(final SmartphoneCallback smartphoneCallback) {
+        Call<ArrayList<Smartphone>>call = smartphoneService.getSmartphoneByTop(UserLoginManager.getInstance().getBearerToken());
+        call.enqueue(new Callback<ArrayList<Smartphone>>() {
+            @Override
+            public void onResponse(Call<ArrayList<Smartphone>> call, Response<ArrayList<Smartphone>> response) {
+
+                smartphones = response.body();
+
+                int code = response.code();
+
+                if (code == 200 || code == 201) {
+                    smartphoneCallback.onSuccess(smartphones);
+                } else {
+                    smartphoneCallback.onFailure(new Throwable("ERROR" + code + ", " + response.raw().message()));
+                }
+            }
+            public void onFailure(Call<ArrayList<Smartphone>> call, Throwable t) {
+                Log.e("SmartphoneManager->", "getSmartphoneByTop: " + t);
+                smartphoneCallback.onFailure(t);
+            }
+        });
+    }
+
+    public synchronized void getAllSmartphoneByTop(final SmartphoneCallback smartphoneCallback) {
+        Call<ArrayList<Smartphone>>call = smartphoneService.getAllSmartphoneByTop(UserLoginManager.getInstance().getBearerToken());
+        call.enqueue(new Callback<ArrayList<Smartphone>>() {
+            @Override
+            public void onResponse(Call<ArrayList<Smartphone>> call, Response<ArrayList<Smartphone>> response) {
+
+                smartphones = response.body();
+
+                int code = response.code();
+
+                if (code == 200 || code == 201) {
+                    smartphoneCallback.onSuccess(smartphones);
+                } else {
+                    smartphoneCallback.onFailure(new Throwable("ERROR" + code + ", " + response.raw().message()));
+                }
+            }
+            public void onFailure(Call<ArrayList<Smartphone>> call, Throwable t) {
+                Log.e("SmartphoneManager->", "getAllSmartphoneByTop: " + t);
+                smartphoneCallback.onFailure(t);
+            }
+        });
+    }
+
+
 }

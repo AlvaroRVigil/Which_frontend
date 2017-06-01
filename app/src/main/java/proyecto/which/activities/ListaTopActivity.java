@@ -1,15 +1,15 @@
-/*package proyecto.which.activities;
+/* package proyecto.which.activities;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import java.util.List;
@@ -52,7 +52,7 @@ public class ListaTopActivity extends AppCompatActivity implements SmartphoneCal
         // en un boton o en otro dependiendo de la Top donde se ha hecho click.
         Bundle bundle = getIntent().getExtras();
         super.onResume();
-        SmartphoneManager.getInstance().getSmartphoneByTop(ListaTopActivity.this, bundle.getString("Top"));
+        SmartphoneManager.getInstance().getSmartphoneByTop(ListaTopActivity.this);
     }
 
     private void setupRecyclerView(@NonNull RecyclerView recyclerView) {
@@ -105,11 +105,11 @@ public class ListaTopActivity extends AppCompatActivity implements SmartphoneCal
             // cogemos la posicion del array que recibimos
             holder.itemSmarthpone = valoresListaSmartphone.get(position);
             // Top y modelo del smartphone
-            holder.nombrePerfilSmartphone.setText(valoresListaSmartphone.get(position).getTop().toString()
+            holder.nombrePerfilSmartphone.setText(valoresListaSmartphone.get(position).getMarca().toString()
                     + " " + valoresListaSmartphone.get(position).getModelo().toString());
             // puntuacion del smartphone
-            holder.puntuacionPerfilSmartphone.setText(""+valoresListaSmartphone.get(position).getpuntuacion());
-
+            holder.puntuacionPerfilSmartphone.setText(valoresListaSmartphone.get(position).getPuntuacion());
+            holder.porcentaje.setProgress(valoresListaSmartphone.get(position).getPuntuacion());
            /* holder.mView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -119,9 +119,9 @@ public class ListaTopActivity extends AppCompatActivity implements SmartphoneCal
                     intent.putExtra(AtletaDetailFragment.ARG_ITEM_ID, holder.itemSmarthpone.getId().toString());
                     context.startActivity(intent);
                 }
-            }); */
-/*
-        }
+            });
+*/
+   /*     }
 
         @Override
         public int getItemCount() {
@@ -133,12 +133,14 @@ public class ListaTopActivity extends AppCompatActivity implements SmartphoneCal
             public final TextView nombrePerfilSmartphone;
             public final TextView puntuacionPerfilSmartphone;
             public Smartphone itemSmarthpone;
+            public ProgressBar porcentaje;
 
             public ViewHolder(View view) {
                 super(view);
                 mView = view;
-                nombrePerfilSmartphone = (TextView) view.findViewById(R.id.Nombre_perfil_Top);
-                puntuacionPerfilSmartphone = (TextView) view.findViewById(R.id.puntuacion_Top);
+                nombrePerfilSmartphone = (TextView) view.findViewById(R.id.Nombre_perfil_top);
+                puntuacionPerfilSmartphone = (TextView) view.findViewById(R.id.percent_perfil_top);
+                porcentaje = (ProgressBar) view.findViewById(R.id.progressBarTop);
             }
 
             @Override

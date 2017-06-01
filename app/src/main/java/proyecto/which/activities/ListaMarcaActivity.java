@@ -1,5 +1,6 @@
 package proyecto.which.activities;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -12,18 +13,27 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
+import layout.FichaFragmentActivity;
 import proyecto.which.R;
 import proyecto.which.managers.SmartphoneCallback;
 import proyecto.which.managers.SmartphoneManager;
 import proyecto.which.model.Smartphone;
 
+
+
+
 public class ListaMarcaActivity extends AppCompatActivity implements SmartphoneCallback {
 
+    private boolean mTwoPane;
     private RecyclerView recyclerView;
     private List<Smartphone> smartphones;
     ImageButton back;
+    Date date;
+    Calendar cal;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,27 +41,23 @@ public class ListaMarcaActivity extends AppCompatActivity implements SmartphoneC
         setContentView(R.layout.activity_lista_marca);
 
         back =(ImageButton)findViewById(R.id.back);
-
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View V) {
-
                 Intent Intentback = new Intent(ListaMarcaActivity.this, MarcasActivity.class);
                 startActivity(Intentback);
-
             }
 
 
         });
 
-
-
-
-
         recyclerView = (RecyclerView) findViewById(R.id.smartphone_list_marca);
         assert recyclerView != null;
-    }
 
+        if (findViewById(R.id.fragment) != null) {
+            mTwoPane = true;
+        }
+    }
 
 
 //    @Override
@@ -113,6 +119,7 @@ public class ListaMarcaActivity extends AppCompatActivity implements SmartphoneC
             return new ViewHolder(view);
         }
 
+
         @Override
         public void onBindViewHolder(final ViewHolder holder, final int position) {
             // mostramos la lista de smartphones con los siguientes parametros
@@ -123,17 +130,45 @@ public class ListaMarcaActivity extends AppCompatActivity implements SmartphoneC
             + " " + valoresListaSmartphone.get(position).getModelo().toString());
             // bateria del smartphone
             holder.bateriaPerfilSmartphone.setText(""+valoresListaSmartphone.get(position).getBateria());
+            holder.camaraPerfilSmartphone.setText(""+valoresListaSmartphone.get(position).getCamara());
+            holder.smartPerfilSmartphone.setText(""+valoresListaSmartphone.get(position).getPuntuacion());
+            holder.pulgadasPerfilSmartphone.setText(""+valoresListaSmartphone.get(position).getPulgadasPantalla().toString());
+            //holder.diaPerfilSmartphone.setText(""+valoresListaSmartphone.get(position).getFechaLancamiento());
 
-           /* holder.mView.setOnClickListener(new View.OnClickListener() {
+            /*date = valoresListaSmartphone.get(position).getFechaLancamiento();
+            cal = Calendar.getInstance();
+            cal.setTime(date);
+            int anyo = cal.get(Calendar.YEAR);
+            int mes = cal.get(Calendar.MONTH);
+            int dia = cal.get(Calendar.DAY_OF_MONTH);
+
+            StringBuilder sb = new StringBuilder();
+            sb.append("");
+            sb.append(dia);
+            String strI = sb.toString();
+
+            holder.diaPerfilSmartphone.setText(strI);*/
+
+            holder.mView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Context context = v.getContext();
-                    Intent intent = new Intent(context, AtletaDetailActivity.class);
-                    // A la nueva activity le envía la id del atleta seleccionado
-                    intent.putExtra(AtletaDetailFragment.ARG_ITEM_ID, holder.itemSmarthpone.getId().toString());
-                    context.startActivity(intent);
+                    if (mTwoPane) {
+                        Bundle arguments = new Bundle();
+                        arguments.putString(FichaFragmentActivity.ARG_ITEM_ID, holder.itemSmarthpone.getId().toString());
+                        FichaFragmentActivity fragment = new FichaFragmentActivity();
+                        fragment.setArguments(arguments);
+                        getSupportFragmentManager().beginTransaction()
+                                .replace(R.id.fragment, fragment)
+                                .commit();
+                    }else{
+                        Context context = v.getContext();
+                        Intent intent = new Intent(context, FichaActivity.class);
+                        // A la nueva activity le envía la id del smartphone seleccionado
+                        intent.putExtra(FichaFragmentActivity.ARG_ITEM_ID, holder.itemSmarthpone.getId().toString());
+                        context.startActivity(intent);
+                    }
                 }
-            }); */
+            });
         }
 
         @Override
@@ -145,6 +180,11 @@ public class ListaMarcaActivity extends AppCompatActivity implements SmartphoneC
             public final View mView;
             public final TextView nombrePerfilSmartphone;
             public final TextView bateriaPerfilSmartphone;
+            public final TextView smartPerfilSmartphone;
+            public final TextView camaraPerfilSmartphone;
+            public final TextView pulgadasPerfilSmartphone;
+            public final TextView diaPerfilSmartphone;
+
             public Smartphone itemSmarthpone;
 
             public ViewHolder(View view) {
@@ -152,6 +192,10 @@ public class ListaMarcaActivity extends AppCompatActivity implements SmartphoneC
                 mView = view;
                 nombrePerfilSmartphone = (TextView) view.findViewById(R.id.Nombre_perfil_marca);
                 bateriaPerfilSmartphone = (TextView) view.findViewById(R.id.bateria_perfil_marca);
+                smartPerfilSmartphone = (TextView) view.findViewById(R.id.smart_perfil_marca);
+                camaraPerfilSmartphone = (TextView) view.findViewById(R.id.camara_perfil_marca);
+                pulgadasPerfilSmartphone = (TextView) view.findViewById(R.id.pantalla_perfil_marca);
+                diaPerfilSmartphone = (TextView) view.findViewById(R.id.Dia_perfil_marca);
             }
 
             @Override

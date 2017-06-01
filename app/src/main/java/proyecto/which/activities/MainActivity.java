@@ -2,24 +2,36 @@ package proyecto.which.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 
-import proyecto.which.Shooting_Range;
-import proyecto.which.SplashActivity;
-import proyecto.which.MisDispositivos;
+import java.util.List;
+
 import proyecto.which.R;
+import proyecto.which.SplashActivity;
+import proyecto.which.managers.SmartphoneCallback;
+import proyecto.which.model.Smartphone;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements SmartphoneCallback, NavigationView.OnNavigationItemSelectedListener {
+
+    private RecyclerView recyclerView;
+    private List<Smartphone> smartphones;
 
     ImageButton ExplorarMarcas;
     ImageButton Buscar;
@@ -37,8 +49,10 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        
-        
+
+        recyclerView = (RecyclerView) findViewById(R.id.smartphone_list_top);
+        assert recyclerView != null;
+
         /*---------------------------------------------------------BARRA--------------------------------------------------
 
         ic_inicio =(ImageButton)findViewById(R.id.ic_inicio);
@@ -113,32 +127,22 @@ public class MainActivity extends AppCompatActivity
 
 
         Best =(ImageButton)findViewById(R.id.todo);
-
         Best.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View V) {
-
                 Intent IntentBest = new Intent(MainActivity.this, ListaMejorActivity.class);
                 startActivity(IntentBest);
-
             }
 
 
         });
-        
-        
-        
-        
 
         Buscar =(ImageButton)findViewById(R.id.buscar);
-
         Buscar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View V) {
-
                 Intent IntentBuscar = new Intent(MainActivity.this, BuscarActivity.class);
                 startActivity(IntentBuscar);
-
             }
 
 
@@ -158,39 +162,26 @@ public class MainActivity extends AppCompatActivity
         }); */
 
         ExplorarMarcas =(ImageButton)findViewById(R.id.marcas);
-
         ExplorarMarcas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View V) {
-
                 Intent ExplorarMarcas = new Intent(MainActivity.this, MarcasActivity.class);
                 startActivity(ExplorarMarcas);
-
             }
 
 
         });
 
         ExplorarSistemas =(ImageButton)findViewById(R.id.sistemas);
-
         ExplorarSistemas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View V) {
-
-                Intent ExplorarSistemas = new Intent(MainActivity.this, SistemasActivity.class);
-                startActivity(ExplorarSistemas);
-
+                //  Intent ExplorarSistemas = new Intent(MainActivity.this, SistemasActivity.class);
+                // startActivity(ExplorarSistemas);
             }
 
 
         });
-
-
-
-
-
-
-
 
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -213,6 +204,107 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+// SmartphoneManager.getInstance().getSmartphoneByTop(MainActivity.this);
+    }
+
+    private void setupRecyclerView(@NonNull RecyclerView recyclerView) {
+        Log.i("setupRecyclerView", "                     " + smartphones);
+        recyclerView.setAdapter(new MainActivity.SimpleItemRecyclerViewAdapter(smartphones));
+    }
+
+    @Override
+    public void onSuccess(List<Smartphone> smartphoneListTop) {
+        smartphones = smartphoneListTop;
+        setupRecyclerView(recyclerView);
+    }
+
+    @Override
+    public void onSucces() {
+
+    }
+
+    @Override
+    public void onSuccess(Smartphone smartphone) {
+
+    }
+
+    @Override
+    public void onFailure(Throwable t) {
+        Intent i = new Intent(MainActivity.this, LoginActivity.class);
+        startActivity(i);
+        finish();
+    }
+
+    public class SimpleItemRecyclerViewAdapter
+            extends RecyclerView.Adapter<MainActivity.SimpleItemRecyclerViewAdapter.ViewHolder> {
+
+        private final List<Smartphone> valoresListaSmartphone;
+
+        public SimpleItemRecyclerViewAdapter(List<Smartphone> items) {
+            valoresListaSmartphone = items;
+        }
+
+        @Override
+        public MainActivity.SimpleItemRecyclerViewAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+            View view = LayoutInflater.from(parent.getContext())
+                    .inflate(R.layout.content_perfil_top, parent, false);
+            return new MainActivity.SimpleItemRecyclerViewAdapter.ViewHolder(view);
+        }
+
+        @Override
+        public void onBindViewHolder(final MainActivity.SimpleItemRecyclerViewAdapter.ViewHolder holder, final int position) {
+            // mostramos la lista de smartphones con los siguientes parametros
+            // cogemos la posicion del array que recibimos
+            holder.itemSmarthpone = valoresListaSmartphone.get(position);
+            // marca y modelo del smartphone
+            holder.nombrePerfilSmartphone.setText(valoresListaSmartphone.get(position).getMarca().toString()
+                    + " " + valoresListaSmartphone.get(position).getModelo().toString());
+            // puntuacion del smartphone
+            holder.puntuacionPerfilSmartphone.setText(valoresListaSmartphone.get(position).getPuntuacion());
+            holder.porcentaje.setProgress(valoresListaSmartphone.get(position).getPuntuacion());
+           /* holder.mView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Context context = v.getContext();
+                    Intent intent = new Intent(context, AtletaDetailActivity.class);
+                    // A la nueva activity le envía la id del atleta seleccionado
+                    intent.putExtra(AtletaDetailFragment.ARG_ITEM_ID, holder.itemSmarthpone.getId().toString());
+                    context.startActivity(intent);
+                }
+            });
+*/
+        }
+
+        @Override
+        public int getItemCount() {
+            return valoresListaSmartphone.size();
+        }
+
+        public class ViewHolder extends RecyclerView.ViewHolder {
+            public final View mView;
+            public final TextView nombrePerfilSmartphone;
+            public final TextView puntuacionPerfilSmartphone;
+            public Smartphone itemSmarthpone;
+            public ProgressBar porcentaje;
+
+            public ViewHolder(View view) {
+                super(view);
+                mView = view;
+                nombrePerfilSmartphone = (TextView) view.findViewById(R.id.Nombre_perfil_top);
+                puntuacionPerfilSmartphone = (TextView) view.findViewById(R.id.percent_perfil_top);
+                porcentaje = (ProgressBar) view.findViewById(R.id.progressBarTop);
+            }
+
+            @Override
+            public String toString() {
+                return super.toString() + " '" + puntuacionPerfilSmartphone.getText() + "'";
+            }
+        }
     }
 
     @Override

@@ -1,5 +1,6 @@
 package proyecto.which.services;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -60,4 +61,11 @@ public interface SmartphoneService {
             @Header("Authorization") String Authorization,
             @QueryMap Map<String, String> filtros);
 
+    @GET("api/smartphones/orderByPuntuacion")
+    Call<ArrayList<Smartphone>> getSmartphoneByTop(
+            @Header("Authorization") String Authorization);
+
+    @GET("api/smartphones/orderAllByPuntuacion")
+    Call<ArrayList<Smartphone>> getAllSmartphoneByTop(
+            @Header("Authorization") String Authorization);
 }

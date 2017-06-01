@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="layout.ficha">
+    tools:context="layout.FichaFragmentActivity">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/app_bar"
@@ -25,7 +25,7 @@
                 android:textColor="@color/colorPrimary"
                 android:textSize="20sp" />
 
-            <android.support.v7.widget.Toolbar
+         <!--   <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="20dp"
                 android:layout_height="?attr/actionBarSize"
@@ -33,7 +33,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginLeft="70dp"
                 android:background="@color/transparent"
-                app:popupTheme="@style/AppTheme.PopupOverlay" />
+                app:popupTheme="@style/AppTheme.PopupOverlay" /> -->
 
         </RelativeLayout>
 
@@ -86,8 +86,7 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:text="Samsung Galaxy S7 Edge"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textSize="15sp" />
+                    android:textColor="@color/colorPrimaryDark"/>
 
                 <TextView
                     android:id="@+id/lanzamiento"
@@ -233,7 +232,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/Camara"
                     android:gravity="center"
-                    android:visibility="visible">
+                    android:visibility="gone">
 
 
                     <ImageView
@@ -337,7 +336,7 @@
                                 android:layout_centerInParent="true">
 
                                 <TextView
-                                    android:id="@+id/camaratrasera_ficha"
+                                    android:id="@+id/camaradelantera_ficha"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="5" />
@@ -347,7 +346,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_alignParentTop="true"
-                                    android:layout_toEndOf="@+id/camaratrasera_ficha"
+                                    android:layout_toEndOf="@+id/camaradelantera_ficha"
                                     android:text="Mpx" />
                             </RelativeLayout>
                         </RelativeLayout>
@@ -443,7 +442,7 @@
                                 android:layout_centerInParent="false">
 
                                 <TextView
-                                    android:id="@+id/ancho_ficha"
+                                    android:id="@+id/ram_ficha"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_alignParentStart="true"
@@ -456,7 +455,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="50dp"
                                     android:layout_alignParentTop="false"
-                                    android:layout_toEndOf="@+id/ancho_ficha"
+                                    android:layout_toEndOf="@+id/ram_ficha"
                                     android:gravity="bottom"
                                     android:paddingLeft="5dp"
                                     android:text="GB"
@@ -667,6 +666,7 @@
                         android:textSize="18sp" />
                 </RelativeLayout>
 
+
                 <RelativeLayout
                     android:id="@+id/infootros"
                     android:layout_width="match_parent"
@@ -698,7 +698,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
                                     android:gravity="center_horizontal"
-                                    android:text="Memoria Interna" />
+                                    android:text="Protección liquido" />
 
                                 <RelativeLayout
                                     android:layout_width="wrap_content"
@@ -713,24 +713,23 @@
                                         android:layout_centerInParent="false">
 
                                         <TextView
-                                            android:id="@+id/rom_ficha"
+                                            android:id="@+id/liquido_ficha"
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:layout_alignParentStart="true"
                                             android:layout_alignParentTop="true"
-                                            android:text="64"
-                                            android:textSize="40sp" />
+                                            android:text="6"
+                                            android:textSize="30sp" />
 
                                         <TextView
                                             android:id="@+id/textView4"
                                             android:layout_width="wrap_content"
                                             android:layout_height="50dp"
                                             android:layout_alignParentTop="false"
-                                            android:layout_toEndOf="@+id/rom_ficha"
-                                            android:gravity="bottom"
+                                            android:layout_toEndOf="@+id/liquido_ficha"
                                             android:paddingLeft="5dp"
-                                            android:text="GB"
-                                            android:textSize="20sp" />
+                                            android:text="/8"
+                                            android:textSize="30sp" />
                                     </RelativeLayout>
                                 </RelativeLayout>
 
@@ -758,7 +757,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
                                     android:gravity="center_horizontal"
-                                    android:text="RAM" />
+                                    android:text="Protección polvo" />
 
                                 <RelativeLayout
                                     android:layout_width="wrap_content"
@@ -773,24 +772,23 @@
                                         android:layout_centerInParent="false">
 
                                         <TextView
-                                            android:id="@+id/ancho_ficha"
+                                            android:id="@+id/polvo_ficha"
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:layout_alignParentStart="true"
                                             android:layout_alignParentTop="true"
-                                            android:text="4"
-                                            android:textSize="40sp" />
+                                            android:text="5"
+                                            android:textSize="30sp" />
 
                                         <TextView
                                             android:id="@+id/textView4"
                                             android:layout_width="wrap_content"
                                             android:layout_height="50dp"
                                             android:layout_alignParentTop="false"
-                                            android:layout_toEndOf="@+id/ancho_ficha"
-                                            android:gravity="bottom"
+                                            android:layout_toEndOf="@+id/polvo_ficha"
                                             android:paddingLeft="5dp"
-                                            android:text="GB"
-                                            android:textSize="20sp" />
+                                            android:text="/6"
+                                            android:textSize="30sp" />
                                     </RelativeLayout>
                                 </RelativeLayout>
 
@@ -822,7 +820,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
                                     android:gravity="center_horizontal"
-                                    android:text="Memoria Interna" />
+                                    android:text="Dimensiones" />
 
                                 <RelativeLayout
                                     android:layout_width="60dp"
@@ -970,6 +968,7 @@
                     </LinearLayout>
 
                 </RelativeLayout>
+
 
                 <RelativeLayout
                     android:id="@+id/otros"

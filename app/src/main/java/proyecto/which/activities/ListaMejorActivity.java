@@ -2,15 +2,21 @@ package proyecto.which.activities;//package proyecto.which.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import java.util.List;
 
 import proyecto.which.R;
 import proyecto.which.managers.SmartphoneCallback;
+import proyecto.which.managers.SmartphoneManager;
 import proyecto.which.model.Smartphone;
 
 public class ListaMejorActivity extends AppCompatActivity implements SmartphoneCallback {
@@ -38,29 +44,17 @@ public class ListaMejorActivity extends AppCompatActivity implements SmartphoneC
 
         });
 
-/*
-
-
 
         recyclerView = (RecyclerView) findViewById(R.id.smartphone_list_mejor);
         assert recyclerView != null;
     }
 
-
-
-//    @Override
-//    protected void onPostResume() {
-//        super.onPostResume();
-//        AtletaManager.getInstance().getAllAtletas(AtletaListActivity.this);
-//    }
-
     @Override
     protected void onResume() {
-        // Sirve para recoger los extra que recibimos de BuscarsActivity.java a la hora de hacer clic
+        // Sirve para recoger los extra que recibimos de MainActivity.java a la hora de hacer clic
         // en un boton o en otro dependiendo de la mejor donde se ha hecho click.
-        Bundle bundle = getIntent().getExtras();
         super.onResume();
-        SmartphoneManager.getInstance().getSmartphoneByBuscar(ListaBuscarActivity.this, bundle.getString("mejor"));
+        SmartphoneManager.getInstance().getAllSmartphoneByTop(ListaMejorActivity.this);
     }
 
     private void setupRecyclerView(@NonNull RecyclerView recyclerView) {
@@ -86,10 +80,11 @@ public class ListaMejorActivity extends AppCompatActivity implements SmartphoneC
 
     @Override
     public void onFailure(Throwable t) {
-        Intent i = new Intent(ListaBuscarActivity.this, LoginActivity.class);
+        Intent i = new Intent(ListaMejorActivity.this, LoginActivity.class);
         startActivity(i);
         finish();
     }
+
 
     public class SimpleItemRecyclerViewAdapter
             extends RecyclerView.Adapter<SimpleItemRecyclerViewAdapter.ViewHolder> {
@@ -113,7 +108,7 @@ public class ListaMejorActivity extends AppCompatActivity implements SmartphoneC
             // cogemos la posicion del array que recibimos
             holder.itemSmarthpone = valoresListaSmartphone.get(position);
             // Buscar y modelo del smartphone
-            holder.nombrePerfilSmartphone.setText(valoresListaSmartphone.get(position).getBuscar().toString()
+            holder.nombrePerfilSmartphone.setText(valoresListaSmartphone.get(position).getMarca().toString()
             + " " + valoresListaSmartphone.get(position).getModelo().toString());
             // bateria del smartphone
             holder.bateriaPerfilSmartphone.setText(""+valoresListaSmartphone.get(position).getBateria());
@@ -128,50 +123,30 @@ public class ListaMejorActivity extends AppCompatActivity implements SmartphoneC
                     context.startActivity(intent);
                 }
             }); */
+    }
+
+    @Override
+    public int getItemCount() {
+        return valoresListaSmartphone.size();
+    }
+
+    public class ViewHolder extends RecyclerView.ViewHolder {
+        public final View mView;
+        public final TextView nombrePerfilSmartphone;
+        public final TextView bateriaPerfilSmartphone;
+        public Smartphone itemSmarthpone;
+
+        public ViewHolder(View view) {
+            super(view);
+            mView = view;
+            nombrePerfilSmartphone = (TextView) view.findViewById(R.id.Nombre_perfil_mejor);
+            bateriaPerfilSmartphone = (TextView) view.findViewById(R.id.bateria_perfil_mejor);
         }
 
-    @Override
-    public void onSuccess(List<Smartphone> smartphoneList) {
-
-    }
-
-    @Override
-    public void onSucces() {
-
-    }
-
-    @Override
-    public void onSuccess(Smartphone smartphone) {
-
-    }
-
-    @Override
-    public void onFailure(Throwable t) {
-
-    }
-/*
         @Override
-        public int getItemCount() {
-            return valoresListaSmartphone.size();
+        public String toString() {
+            return super.toString() + " '" + bateriaPerfilSmartphone.getText() + "'";
         }
-
-        public class ViewHolder extends RecyclerView.ViewHolder {
-            public final View mView;
-            public final TextView nombrePerfilSmartphone;
-            public final TextView bateriaPerfilSmartphone;
-            public Smartphone itemSmarthpone;
-
-            public ViewHolder(View view) {
-                super(view);
-                mView = view;
-                nombrePerfilSmartphone = (TextView) view.findViewById(R.id.Nombre_perfil_mejor);
-                bateriaPerfilSmartphone = (TextView) view.findViewById(R.id.bateria_mejor);
-            }
-
-            @Override
-            public String toString() {
-                return super.toString() + " '" + bateriaPerfilSmartphone.getText() + "'";
-            }
-        }
-    }*/
+    }
+    }
 }

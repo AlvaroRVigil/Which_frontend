@@ -405,7 +405,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
                     android:layout_below="@+id/memoria"
-                    android:visibility="gone">
+                    android:visibility="visible">
 
 
                     <ImageView
@@ -569,7 +569,7 @@
                     android:layout_alignParentStart="true"
                     android:layout_below="@+id/pantalla"
                     android:gravity="center"
-                    android:visibility="gone">
+                    android:visibility="visible">
 
 
                     <RelativeLayout
@@ -674,7 +674,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
                     android:layout_below="@+id/otros"
-                    android:visibility="gone">
+                    android:visibility="visible">
 
 
                     <LinearLayout

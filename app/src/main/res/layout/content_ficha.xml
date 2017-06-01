@@ -699,7 +699,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
                                     android:gravity="center_horizontal"
-                                    android:text="Memoria Interna" />
+                                    android:text="Protección liquido" />
 
                                 <RelativeLayout
                                     android:layout_width="wrap_content"
@@ -714,24 +714,23 @@
                                         android:layout_centerInParent="false">
 
                                         <TextView
-                                            android:id="@+id/rom_ficha"
+                                            android:id="@+id/liquido_ficha"
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:layout_alignParentStart="true"
                                             android:layout_alignParentTop="true"
-                                            android:text="64"
-                                            android:textSize="40sp" />
+                                            android:text="6"
+                                            android:textSize="30sp" />
 
                                         <TextView
                                             android:id="@+id/textView4"
                                             android:layout_width="wrap_content"
                                             android:layout_height="50dp"
                                             android:layout_alignParentTop="false"
-                                            android:layout_toEndOf="@+id/rom_ficha"
-                                            android:gravity="bottom"
+                                            android:layout_toEndOf="@+id/liquido_ficha"
                                             android:paddingLeft="5dp"
-                                            android:text="GB"
-                                            android:textSize="20sp" />
+                                            android:text="/8"
+                                            android:textSize="30sp" />
                                     </RelativeLayout>
                                 </RelativeLayout>
 
@@ -759,7 +758,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
                                     android:gravity="center_horizontal"
-                                    android:text="RAM" />
+                                    android:text="Protección polvo" />
 
                                 <RelativeLayout
                                     android:layout_width="wrap_content"
@@ -774,24 +773,23 @@
                                         android:layout_centerInParent="false">
 
                                         <TextView
-                                            android:id="@+id/ancho_ficha"
+                                            android:id="@+id/polvo_ficha"
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:layout_alignParentStart="true"
                                             android:layout_alignParentTop="true"
-                                            android:text="4"
-                                            android:textSize="40sp" />
+                                            android:text="5"
+                                            android:textSize="30sp" />
 
                                         <TextView
                                             android:id="@+id/textView4"
                                             android:layout_width="wrap_content"
                                             android:layout_height="50dp"
                                             android:layout_alignParentTop="false"
-                                            android:layout_toEndOf="@+id/ancho_ficha"
-                                            android:gravity="bottom"
+                                            android:layout_toEndOf="@+id/polvo_ficha"
                                             android:paddingLeft="5dp"
-                                            android:text="GB"
-                                            android:textSize="20sp" />
+                                            android:text="/6"
+                                            android:textSize="30sp" />
                                     </RelativeLayout>
                                 </RelativeLayout>
 
@@ -823,7 +821,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
                                     android:gravity="center_horizontal"
-                                    android:text="Memoria Interna" />
+                                    android:text="Dimensiones" />
 
                                 <RelativeLayout
                                     android:layout_width="60dp"

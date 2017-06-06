@@ -155,7 +155,7 @@ public class ListaSistemaActivity extends AppCompatActivity implements Smartphon
             public final TextView smartPerfilSmartphone;
             public final TextView camaraPerfilSmartphone;
             public final TextView pulgadasPerfilSmartphone;
-            public final TextView diaPerfilSmartphone;
+            //public final TextView diaPerfilSmartphone;
             public Smartphone itemSmarthpone;
 
             public ViewHolder(View view) {
@@ -166,7 +166,7 @@ public class ListaSistemaActivity extends AppCompatActivity implements Smartphon
                 smartPerfilSmartphone = (TextView) view.findViewById(R.id.smart_perfil_sistema);
                 camaraPerfilSmartphone = (TextView) view.findViewById(R.id.camaratrasera_perfil_sistema);
                 pulgadasPerfilSmartphone = (TextView) view.findViewById(R.id.pantalla_perfil_sistema);
-                diaPerfilSmartphone = (TextView) view.findViewById(R.id.Dia_perfil_sistema);
+                //diaPerfilSmartphone = (TextView) view.findViewById(R.id.Dia_perfil_sistema);
             }
 
             @Override

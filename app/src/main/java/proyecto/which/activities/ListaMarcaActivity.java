@@ -172,7 +172,7 @@ public class ListaMarcaActivity extends AppCompatActivity implements SmartphoneC
             public final TextView smartPerfilSmartphone;
             public final TextView camaraPerfilSmartphone;
             public final TextView pulgadasPerfilSmartphone;
-            public final TextView diaPerfilSmartphone;
+            //public final TextView diaPerfilSmartphone;
 
             public Smartphone itemSmarthpone;
 
@@ -184,7 +184,7 @@ public class ListaMarcaActivity extends AppCompatActivity implements SmartphoneC
                 smartPerfilSmartphone = (TextView) view.findViewById(R.id.smart_perfil_marca);
                 camaraPerfilSmartphone = (TextView) view.findViewById(R.id.camara_perfil_marca);
                 pulgadasPerfilSmartphone = (TextView) view.findViewById(R.id.pantalla_perfil_marca);
-                diaPerfilSmartphone = (TextView) view.findViewById(R.id.Dia_perfil_marca);
+                //diaPerfilSmartphone = (TextView) view.findViewById(R.id.Dia_perfil_marca);
             }
 
             @Override

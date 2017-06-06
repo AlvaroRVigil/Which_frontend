@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity
 
         //SmartphoneManager.getInstance().getSmartphoneByTop(MainActivity.this);
 
-        recyclerView = (RecyclerView) findViewById(R.id.smartphone_list_top);
+        /*recyclerView = (RecyclerView) findViewById(R.id.smartphone_list_top);
         assert recyclerView != null;
 
         /*---------------------------------------------------------BARRA--------------------------------------------------

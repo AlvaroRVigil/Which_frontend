@@ -22,7 +22,7 @@ public class BuscarActivity extends AppCompatActivity {
     private CheckBox chkSamsung, chkApple ,chkNokia, chkHuawei, chkBberry, chkBq, chkTodasMarcas;
     private CheckBox chkIos, chkAndroid, chkWindows, chkBlackBerryOS, chkTodosSistemas;
     private CheckBox chkCTMin, chkCTMed, chkCTMax;
-    private String minPuntuacion = "0", maxPuntuacion = "100";
+    private String minPuntuacion = "0", maxPuntuacion = "100", minMemoria = "1", maxMemoria = "512";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -127,7 +127,7 @@ public class BuscarActivity extends AppCompatActivity {
 
 
         // memoMin
-        Spinner spinnermemomin = (Spinner) findViewById(R.id.memoMin);
+        final Spinner spinnermemomin = (Spinner) findViewById(R.id.memoMin);
         String[] valoresmemomin= {"1","16","32","64","128","256","512"};
         spinnermemomin.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, valoresmemomin));
         spinnermemomin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -135,6 +135,7 @@ public class BuscarActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int position, long id)
             {
+                minMemoria = spinnermemomin.getSelectedItem().toString();
             }
 
             @Override
@@ -142,7 +143,7 @@ public class BuscarActivity extends AppCompatActivity {
         });
 
         // memoMax
-        Spinner spinnermemomax = (Spinner) findViewById(R.id.memoMax);
+        final Spinner spinnermemomax = (Spinner) findViewById(R.id.memoMax);
         String[] valoresmemomax= {"512","256","128","64","32","16","1"};
         spinnermemomax.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, valoresmemomax));
         spinnermemomax.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -150,6 +151,7 @@ public class BuscarActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int position, long id)
             {
+                maxMemoria = spinnermemomax.getSelectedItem().toString();
             }
 
             @Override

@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.HashMap;
 import java.util.List;
@@ -64,8 +65,13 @@ public class ListaBuscarActivity extends AppCompatActivity implements Smartphone
 
     @Override
     public void onSuccess(List<Smartphone> smartphoneListBuscar) {
-        smartphones = smartphoneListBuscar;
-        setupRecyclerView(recyclerView);
+        if(smartphoneListBuscar.size() == 0){
+            Toast toast = Toast.makeText(this, "No se han encontrado dispositivos con los parametros que has seleccionado.", Toast.LENGTH_LONG);
+            toast.show();
+        }else {
+            smartphones = smartphoneListBuscar;
+            setupRecyclerView(recyclerView);
+        }
     }
 
     @Override

@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -26,6 +27,7 @@ public class ListaSistemaActivity extends AppCompatActivity implements Smartphon
     private RecyclerView recyclerView;
     private List<Smartphone> smartphones;
     ImageButton back;
+    Bundle bundle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,7 +71,7 @@ public class ListaSistemaActivity extends AppCompatActivity implements Smartphon
     protected void onResume() {
         // Sirve para recoger los extra que recibimos de SistemasActivity.java a la hora de hacer clic
         // en un boton o en otro dependiendo del sistema donde se ha hecho click.
-        Bundle bundle = getIntent().getExtras();
+        bundle = getIntent().getExtras();
         super.onResume();
         SmartphoneManager.getInstance().getSmartphoneBySo(ListaSistemaActivity.this, bundle.getString("so"));
     }
@@ -81,8 +83,13 @@ public class ListaSistemaActivity extends AppCompatActivity implements Smartphon
 
     @Override
     public void onSuccess(List<Smartphone> smartphoneListSistema) {
-        smartphones = smartphoneListSistema;
-        setupRecyclerView(recyclerView);
+        if(smartphoneListSistema.size() == 0){
+            Toast toast = Toast.makeText(this, "No se han encontrado dispositivos del sistema " + bundle.getString("so"), Toast.LENGTH_LONG);
+            toast.show();
+        }else {
+            smartphones = smartphoneListSistema;
+            setupRecyclerView(recyclerView);
+        }
     }
 
     @Override

@@ -80,6 +80,8 @@ public class BuscarActivity extends AppCompatActivity {
                 datos.put("frontCamara", CamaraFrontal);
                 datos.put("minPuntuacion", minPuntuacion);
                 datos.put("maxPuntuacion", maxPuntuacion);
+                datos.put("minMemoria", minMemoria);
+                datos.put("maxMemoria", maxMemoria);
 
                 Intent buscador = new Intent(BuscarActivity.this, ListaBuscarActivity.class);
                 buscador.putExtra("mapSmartphones", datos);

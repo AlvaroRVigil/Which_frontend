@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -32,6 +33,7 @@ public class ListaMarcaActivity extends AppCompatActivity implements SmartphoneC
     ImageButton back;
     Date date;
     Calendar cal;
+    Bundle bundle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,7 +70,7 @@ public class ListaMarcaActivity extends AppCompatActivity implements SmartphoneC
     protected void onResume() {
         // Sirve para recoger los extra que recibimos de MarcasActivity.java a la hora de hacer clic
         // en un boton o en otro dependiendo de la marca donde se ha hecho click.
-        Bundle bundle = getIntent().getExtras();
+        bundle = getIntent().getExtras();
         super.onResume();
         SmartphoneManager.getInstance().getSmartphoneByMarca(ListaMarcaActivity.this, bundle.getString("marca"));
     }
@@ -80,8 +82,13 @@ public class ListaMarcaActivity extends AppCompatActivity implements SmartphoneC
 
     @Override
     public void onSuccess(List<Smartphone> smartphoneListMarca) {
-        smartphones = smartphoneListMarca;
-        setupRecyclerView(recyclerView);
+        if(smartphoneListMarca.size() == 0){
+            Toast toast = Toast.makeText(this, "No se han encontrado dispositivos de la marca " + bundle.getString("marca"), Toast.LENGTH_LONG);
+            toast.show();
+        }else {
+            smartphones = smartphoneListMarca;
+            setupRecyclerView(recyclerView);
+        }
     }
 
     @Override

@@ -83,7 +83,8 @@
             android:name=".activities.FichaActivity"
             android:label="@string/title_activity_ficha"
             android:theme="@style/AppTheme.NoActionBarBlue" />
-        <activity android:name=".activities.ContactActivity"></activity>
+        <activity android:name=".activities.ContactActivity"
+            android:theme="@style/AppTheme.NoActionBarRed"></activity>
     </application>
 
 </manifest>

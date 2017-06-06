@@ -336,7 +336,7 @@ public class MainActivity extends AppCompatActivity
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
 
-            Intent sett = new Intent(MainActivity.this, FichaActivity.class);
+            Intent sett = new Intent(MainActivity.this, ContactActivity.class);
             startActivity(sett);
         }
 

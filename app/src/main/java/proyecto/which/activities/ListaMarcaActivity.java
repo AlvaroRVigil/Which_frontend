@@ -1,6 +1,5 @@
 package proyecto.which.activities;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -17,7 +16,6 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
-import layout.FichaFragmentActivity;
 import proyecto.which.R;
 import proyecto.which.managers.SmartphoneCallback;
 import proyecto.which.managers.SmartphoneManager;
@@ -133,23 +131,14 @@ public class ListaMarcaActivity extends AppCompatActivity implements SmartphoneC
             holder.camaraPerfilSmartphone.setText(""+valoresListaSmartphone.get(position).getCamara());
             holder.smartPerfilSmartphone.setText(""+valoresListaSmartphone.get(position).getPuntuacion());
             holder.pulgadasPerfilSmartphone.setText(""+valoresListaSmartphone.get(position).getPulgadasPantalla().toString());
-            //holder.diaPerfilSmartphone.setText(""+valoresListaSmartphone.get(position).getFechaLancamiento());
 
             /*date = valoresListaSmartphone.get(position).getFechaLancamiento();
-            cal = Calendar.getInstance();
-            cal.setTime(date);
-            int anyo = cal.get(Calendar.YEAR);
-            int mes = cal.get(Calendar.MONTH);
-            int dia = cal.get(Calendar.DAY_OF_MONTH);
 
-            StringBuilder sb = new StringBuilder();
-            sb.append("");
-            sb.append(dia);
-            String strI = sb.toString();
+            java.sql.Date sqlDate = new java.sql.Date(date.getTime());
 
-            holder.diaPerfilSmartphone.setText(strI);*/
+            holder.diaPerfilSmartphone.setText(""+sqlDate); */
 
-            holder.mView.setOnClickListener(new View.OnClickListener() {
+            /*holder.mView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     if (mTwoPane) {
@@ -168,7 +157,7 @@ public class ListaMarcaActivity extends AppCompatActivity implements SmartphoneC
                         context.startActivity(intent);
                     }
                 }
-            });
+            }); */
         }
 
         @Override

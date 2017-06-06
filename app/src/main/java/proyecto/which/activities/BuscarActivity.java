@@ -22,6 +22,7 @@ public class BuscarActivity extends AppCompatActivity {
     private CheckBox chkSamsung, chkApple ,chkNokia, chkHuawei, chkBberry, chkBq, chkTodasMarcas;
     private CheckBox chkIos, chkAndroid, chkWindows, chkBlackBerryOS, chkTodosSistemas;
     private CheckBox chkCTMin, chkCTMed, chkCTMax;
+    private String minPuntuacion = "0", maxPuntuacion = "100";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,16 +71,19 @@ public class BuscarActivity extends AppCompatActivity {
                 String Marcas = generateMarcaString();
                 String CamaraTrasera = generateCamaraTraseraString();
                 String CamaraFrontal = generateCamaraFrontalString();
+
                 HashMap<String, String> datos = new HashMap<>();
+
                 datos.put("so", OSs);
                 datos.put("marca", Marcas);
                 datos.put("camara", CamaraTrasera);
                 datos.put("frontCamara", CamaraFrontal);
+                datos.put("minPuntuacion", minPuntuacion);
+                datos.put("maxPuntuacion", maxPuntuacion);
 
                 Intent buscador = new Intent(BuscarActivity.this, ListaBuscarActivity.class);
                 buscador.putExtra("mapSmartphones", datos);
                 startActivity(buscador);
-
 
             }
         });
@@ -89,41 +93,36 @@ public class BuscarActivity extends AppCompatActivity {
         // SPINNERS
 
         // puntuacionMin
-        Spinner spinnerpmin = (Spinner) findViewById(R.id.puntuacionMin);
-        String[] valorespmin = {"0","20","40","60","80","100"};
+        final Spinner spinnerpmin = (Spinner) findViewById(R.id.puntuacionMin);
+        String[] valorespmin = {"0", "20", "40", "60", "80", "100"};
         spinnerpmin.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, valorespmin));
         spinnerpmin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
+
             @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int position, long id)
-            {
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                minPuntuacion = spinnerpmin.getSelectedItem().toString();
             }
 
             @Override
-            public void onNothingSelected(AdapterView<?> parent)
-            {
-                // vacio
-
-            }
+            public void onNothingSelected(AdapterView<?> parent) {}
         });
 
+
         // puntuacionMax
-        Spinner spinnerpmax = (Spinner) findViewById(R.id.puntuacionMax);
+        final Spinner spinnerpmax = (Spinner) findViewById(R.id.puntuacionMax);
         String[] valorespmax = {"100","80","60","40","20","0"};
         spinnerpmax.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, valorespmax));
         spinnerpmax.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
             @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int position, long id)
-            {
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                maxPuntuacion = spinnerpmax.getSelectedItem().toString();
             }
+
 
             @Override
-            public void onNothingSelected(AdapterView<?> parent)
-            {
-                // vacio
-
-            }
+            public void onNothingSelected(AdapterView<?> parent) {}
         });
 
 
@@ -139,11 +138,7 @@ public class BuscarActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onNothingSelected(AdapterView<?> parent)
-            {
-                // vacio
-
-            }
+            public void onNothingSelected(AdapterView<?> parent) {}
         });
 
         // memoMax
@@ -158,11 +153,7 @@ public class BuscarActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onNothingSelected(AdapterView<?> parent)
-            {
-                // vacio
-
-            }
+            public void onNothingSelected(AdapterView<?> parent) {}
         });
     }
 

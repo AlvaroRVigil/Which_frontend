@@ -50,6 +50,8 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //SmartphoneManager.getInstance().getSmartphoneByTop(MainActivity.this);
+
         recyclerView = (RecyclerView) findViewById(R.id.smartphone_list_top);
         assert recyclerView != null;
 
@@ -176,8 +178,8 @@ public class MainActivity extends AppCompatActivity
         ExplorarSistemas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View V) {
-                //  Intent ExplorarSistemas = new Intent(MainActivity.this, SistemasActivity.class);
-                // startActivity(ExplorarSistemas);
+                Intent ExplorarSistemas = new Intent(MainActivity.this, SistemasActivity.class);
+                startActivity(ExplorarSistemas);
             }
 
 
@@ -209,7 +211,7 @@ public class MainActivity extends AppCompatActivity
     @Override
     protected void onResume() {
         super.onResume();
-// SmartphoneManager.getInstance().getSmartphoneByTop(MainActivity.this);
+        //SmartphoneManager.getInstance().getSmartphoneByTop(MainActivity.this);
     }
 
     private void setupRecyclerView(@NonNull RecyclerView recyclerView) {

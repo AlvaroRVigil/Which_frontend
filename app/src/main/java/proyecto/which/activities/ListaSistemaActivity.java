@@ -126,8 +126,10 @@ public class ListaSistemaActivity extends AppCompatActivity implements Smartphon
             // Marca y modelo del smartphone
             holder.nombrePerfilSmartphone.setText(valoresListaSmartphone.get(position).getMarca().toString()
                     + " " + valoresListaSmartphone.get(position).getModelo().toString());
-            // bateria del smartphone
             holder.bateriaPerfilSmartphone.setText(""+valoresListaSmartphone.get(position).getBateria());
+            holder.camaraPerfilSmartphone.setText(""+valoresListaSmartphone.get(position).getCamara());
+            holder.smartPerfilSmartphone.setText(""+valoresListaSmartphone.get(position).getPuntuacion());
+            holder.pulgadasPerfilSmartphone.setText(""+valoresListaSmartphone.get(position).getPulgadasPantalla().toString());
 
            /* holder.mView.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -150,6 +152,10 @@ public class ListaSistemaActivity extends AppCompatActivity implements Smartphon
             public final View mView;
             public final TextView nombrePerfilSmartphone;
             public final TextView bateriaPerfilSmartphone;
+            public final TextView smartPerfilSmartphone;
+            public final TextView camaraPerfilSmartphone;
+            public final TextView pulgadasPerfilSmartphone;
+            public final TextView diaPerfilSmartphone;
             public Smartphone itemSmarthpone;
 
             public ViewHolder(View view) {
@@ -157,6 +163,10 @@ public class ListaSistemaActivity extends AppCompatActivity implements Smartphon
                 mView = view;
                 nombrePerfilSmartphone = (TextView) view.findViewById(R.id.Nombre_perfil_sistema);
                 bateriaPerfilSmartphone = (TextView) view.findViewById(R.id.bateria_perfil_sistema);
+                smartPerfilSmartphone = (TextView) view.findViewById(R.id.smart_perfil_sistema);
+                camaraPerfilSmartphone = (TextView) view.findViewById(R.id.camaratrasera_perfil_sistema);
+                pulgadasPerfilSmartphone = (TextView) view.findViewById(R.id.pantalla_perfil_sistema);
+                diaPerfilSmartphone = (TextView) view.findViewById(R.id.Dia_perfil_sistema);
             }
 
             @Override

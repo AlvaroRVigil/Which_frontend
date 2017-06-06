@@ -102,11 +102,14 @@ public class ListaBuscarActivity extends AppCompatActivity implements Smartphone
             // mostramos la lista de smartphones con los siguientes parametros
             // cogemos la posicion del array que recibimos
             holder.itemSmarthpone = valoresListaSmartphone.get(position);
-            // Buscar y modelo del smartphone
+            // Marca y modelo del smartphone
             holder.nombrePerfilSmartphone.setText(valoresListaSmartphone.get(position).getMarca().toString()
             + " " + valoresListaSmartphone.get(position).getModelo().toString());
             // bateria del smartphone
             holder.bateriaPerfilSmartphone.setText(""+valoresListaSmartphone.get(position).getBateria());
+            holder.camaraPerfilSmartphone.setText(""+valoresListaSmartphone.get(position).getCamara());
+            holder.smartPerfilSmartphone.setText(""+valoresListaSmartphone.get(position).getPuntuacion());
+            holder.pulgadasPerfilSmartphone.setText(""+valoresListaSmartphone.get(position).getPulgadasPantalla().toString());
 
            /* holder.mView.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -129,6 +132,9 @@ public class ListaBuscarActivity extends AppCompatActivity implements Smartphone
             public final View mView;
             public final TextView nombrePerfilSmartphone;
             public final TextView bateriaPerfilSmartphone;
+            public final TextView smartPerfilSmartphone;
+            public final TextView camaraPerfilSmartphone;
+            public final TextView pulgadasPerfilSmartphone;
             public Smartphone itemSmarthpone;
 
             public ViewHolder(View view) {
@@ -136,6 +142,9 @@ public class ListaBuscarActivity extends AppCompatActivity implements Smartphone
                 mView = view;
                 nombrePerfilSmartphone = (TextView) view.findViewById(R.id.Nombre_perfil_buscar);
                 bateriaPerfilSmartphone = (TextView) view.findViewById(R.id.bateria_perfil_buscar);
+                smartPerfilSmartphone = (TextView) view.findViewById(R.id.smart_perfil_buscar);
+                camaraPerfilSmartphone = (TextView) view.findViewById(R.id.camara_perfil_buscar);
+                pulgadasPerfilSmartphone = (TextView) view.findViewById(R.id.pantalla_perfil_buscar);
             }
 
             @Override

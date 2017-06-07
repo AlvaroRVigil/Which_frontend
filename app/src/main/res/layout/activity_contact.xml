@@ -78,20 +78,18 @@
             android:text="Si tienes alguna duda sobre la aplicación o deseas dar constancia de algún error, no dudes en contactar con nosotros."
             android:textColor="@color/colorPrimaryDark"
             android:textSize="20sp" />
-    </RelativeLayout>
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fabBuscar"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="center_vertical|center_horizontal"
-        android:layout_margin="@dimen/fab_margin"
-        android:soundEffectsEnabled="false"
-        android:tintMode="multiply"
-        app:backgroundTint="@color/flat_magenta"
-        app:layout_anchor="@+id/relativeLayout6"
-        app:layout_anchorGravity="bottom|right"
-        app:srcCompat="@mipmap/contact" />
+        <ImageButton
+            android:id="@+id/contacto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:background="@color/transparent"
+            android:elevation="0dp"
+            android:padding="16dp"
+            android:src="@mipmap/contact" />
+    </RelativeLayout>
 
 
 </android.support.design.widget.CoordinatorLayout>
